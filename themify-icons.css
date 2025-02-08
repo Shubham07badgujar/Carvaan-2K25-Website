@@ -1,0 +1,12 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/themify-icons/0.1.2/css/themify-icons.css");
+
+.icon {
+  font-size: 24px;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
+}
