@@ -6,6 +6,8 @@ const authRoutes = require('./routes/auth');
 const eventRoutes = require('./routes/events');
 
 const app = express();
+
+// Database connection (inside the 'database.js' file)
 require('./database');
 
 // Middleware
