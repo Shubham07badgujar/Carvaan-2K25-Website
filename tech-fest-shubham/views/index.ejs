@@ -11,25 +11,8 @@
 <body>
 
     <!-- Header with Navigation -->
-    <header class="bg-gray-800 text-white p-4 flex justify-between items-center">
-        <div class="flex items-center">
-            <img src="public/images/college-logo.png" alt="College Logo" class="w-16 h-16">
-            <h1 class="text-2xl ml-3">Tech Fest - College Name</h1>
-        </div>
-        <nav>
-            <ul class="flex space-x-4">
-                <li><a href="/" class="hover:text-yellow-300">Home</a></li>
-                <li><a href="/events" class="hover:text-yellow-300">Events</a></li>
-                <li><a href="/about" class="hover:text-yellow-300">About</a></li>
-                <li><a href="/contact" class="hover:text-yellow-300">Contact</a></li>
-                <li><a href="/admin" class="hover:text-yellow-300">Admin</a></li>
-            </ul>
-        </nav>
-    </header>
-  
-  
-  
-  
+    <%- include('./partials/header')%>
+
     <!-- Hero Section -->
     <section class="text-center py-20 bg-cover" style="background-image: url('public/images/banner.jpg'); background-size: cover; background-position: center;">
         <h2 class="text-5xl font-bold text-white" style="color: black;">Welcome to Tech-Fest 2024</h2>
@@ -43,7 +26,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card shadow-lg">
-                    <img src="public/images/carvaan.jpg" class="card-img-top" alt="Carvaan">
+                    <img src="images\carvaan.png" height="50px" width="50px" class="card-img-top" alt="Carvaan">
                     <div class="card-body">
                         <h3 class="card-title">Carvaan</h3>
                         <p class="card-text">A celebration of technology and culture.</p>
@@ -53,9 +36,9 @@
             </div>
             <div class="col-md-4">
                 <div class="card shadow-lg">
-                    <img src="public/images/kalasangum.jpg" class="card-img-top" alt="KalaSangum">
+                    <img src="images\kalasangam.png" height="50px" width="50px" class="card-img-top" alt="KalaSangum">
                     <div class="card-body">
-                        <h3 class="card-title">KalaSangum</h3>
+                        <h3 class="card-title">Kalasangam</h3>
                         <p class="card-text">A fusion of art and innovation.</p>
                         <a href="/event-details?event=kalasangum" class="btn btn-primary">Learn More</a>
                     </div>
@@ -63,7 +46,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card shadow-lg">
-                    <img src="public/images/tech-carvaan.jpg" class="card-img-top" alt="Tech Carvaan">
+                    <img src="images\techCarvaan.png" height="50px" width="50px" class="card-img-top" alt="Tech Carvaan">
                     <div class="card-body">
                         <h3 class="card-title">Tech Carvaan</h3>
                         <p class="card-text">Bringing technology to the future.</p>
