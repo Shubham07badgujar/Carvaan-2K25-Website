@@ -10,6 +10,10 @@ const app = express();
 // Database connection (inside the 'database.js' file)
 require('./database');
 
+
+//view Engine
+app.set('view engine', 'ejs');
+
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public'))); // ✅ Serve static assets
