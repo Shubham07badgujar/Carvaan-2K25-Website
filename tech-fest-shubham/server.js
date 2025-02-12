@@ -19,15 +19,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public'))); // ✅ Serve static assets
 
 // ✅ Serve HTML pages
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views', 'index.html')));
-app.get('/about', (req, res) => res.sendFile(path.join(__dirname, 'views', 'about.html')));
-app.get('/contact', (req, res) => res.sendFile(path.join(__dirname, 'views', 'contact.html')));
-app.get('/admin', (req, res) => res.sendFile(path.join(__dirname, 'views', 'admin-dashboard.html')));
-app.get('/events', (req, res) => res.sendFile(path.join(__dirname, 'views', 'events.html')));
-app.get('/event-details', (req, res) => res.sendFile(path.join(__dirname, 'views', 'event-details.html')));
-app.get('/registration', (req, res) => res.sendFile(path.join(__dirname, 'views', 'registration.html')));
-app.get('/payment', (req, res) => res.sendFile(path.join(__dirname, 'views', 'payment.html')));
-app.get('/workshop', (req, res) => res.sendFile(path.join(__dirname, 'views', 'workshop.html')));
+app.get('/', (req, res) => res.render('index'))
+app.get('/about', (req, res) => res.render('about'))
+app.get('/contact', (req, res) => res.render('contact'))
+app.get('/admin', (req, res) => res.render('admin-dashboard'))
+app.get('/events', (req, res) => res.render('events'))
+app.get('/event-details', (req, res) => res.render('event-details'))
+app.get('/registration', (req, res) => res.render('registration'))
+app.get('/payment', (req, res) => res.render('payment'))
+app.get('/workshop', (req, res) => res.render('workshop'))
 
 // ✅ Serve `header.html` correctly
 app.get('/header.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'header.html')));
