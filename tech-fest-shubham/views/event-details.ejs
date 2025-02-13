@@ -3,31 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Details</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Event Details - <%= eventName %></title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #00FF00; /* Hacker green text color */
+        }
+        .card {
+            background-color: #1a1a1a;
+            border: 2px solid #00FF00;
+        }
+        .card:hover {
+            background-color: #333;
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+        .button-hover:hover {
+            background-color: #00FF00;
+            color: #121212;
+            transition: all 0.3s ease-in-out;
+        }
+        .title-transition {
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+        .title-transition:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Event Details</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="font-mono">
 
-    <section id="event-info">
-        <h2 id="event-name"></h2>
-        <p id="event-description"></p>
-        <a href="registration.html" class="btn">Register Now</a>
-    </section>
+    <div class="container mx-auto p-8">
+        <!-- Event Card -->
+        <div class="card max-w-lg mx-auto p-6 rounded-lg shadow-xl">
+            <div class="flex justify-center mb-6">
+                <img src="<%= eventImage %>" alt="<%= eventName %>" class="h-32 w-32 object-cover rounded-full mb-4" />
+            </div>
+            <h1 class="text-4xl font-bold text-center title-transition mb-4"><%= eventName %></h1>
+            <p class="text-xl text-center mb-6 opacity-75"><%= eventDescription %></p>
+            <div class="transition duration-500 ease-in-out transform hover:scale-110">
+                <h3 class="text-2xl font-semibold mb-2">Details:</h3>
+                <ul class="list-disc pl-6 text-lg">
+                    <% eventDetails.forEach(function(detail) { %>
+                        <li><%= detail %></li>
+                    <% }); %>
+                </ul>
+            </div>
 
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const eventName = urlParams.get('event');
-        document.getElementById("event-name").innerText = eventName || "Event Name";
-        document.getElementById("event-description").innerText = `Details about ${eventName}`;
-    </script>
+            <div class="flex justify-center mt-8">
+                <a href="/" class="button-hover py-2 px-4 border-2 rounded-md">Go Back</a>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

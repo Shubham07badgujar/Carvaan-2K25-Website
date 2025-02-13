@@ -29,6 +29,30 @@ app.get('/registration', (req, res) => res.render('registration'))
 app.get('/payment', (req, res) => res.render('payment'))
 app.get('/workshop', (req, res) => res.render('workshop'))
 
+const events = {
+    "tech-carvaan": {
+        eventName: "Tech Carvaan",
+        eventImage: "/images/techCarvaan.png", // Replace with actual image path
+        eventDescription: "Bringing technology to the future.",
+        eventDetails: [
+            "AI Workshops",
+            "Robotics Demo",
+            "Tech Talks from Experts",
+            "Networking with Innovators"
+        ]
+    }
+};
+
+// Route for event details
+app.get('/event-details', (req, res) => {
+    const eventSlug = req.query.event;
+    if (events[eventSlug]) {
+        res.render('event-details', events[eventSlug]);
+    } else {
+        res.status(404).send('Event not found');
+    }
+});
+
 
 // ✅ Dummy Data for Committees
 const committees = [
