@@ -10,7 +10,6 @@ const app = express();
 // Database connection (inside the 'database.js' file)
 require('./database');
 
-
 //view Engine
 app.set('view engine', 'ejs');
 
