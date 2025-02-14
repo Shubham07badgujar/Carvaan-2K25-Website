@@ -25,3 +25,21 @@ nav ul li a {
 .card:hover {
     transform: scale(1.05);
 }
+
+.college-logo-container {
+    text-align: center;
+    /* Centers inline elements */
+    width: 100%;
+    margin-top: 0px;
+    /* Adjust spacing if needed */
+}
+
+.college-logo {
+    width: 100%;
+    background-color: white;
+    /* Makes the image cover full width */
+    max-height: 200px;
+    /* Adjust max height as needed */
+    object-fit: contain;
+    /* Ensures the image maintains aspect ratio */
+}
