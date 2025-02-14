@@ -42,4 +42,6 @@ nav ul li a {
     /* Adjust max height as needed */
     object-fit: contain;
     /* Ensures the image maintains aspect ratio */
+    display: block;
+    margin: auto;
 }
