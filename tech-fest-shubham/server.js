@@ -52,6 +52,10 @@ app.get('/event-details', (req, res) => {
     }
 });
 
+app.get('/kalasangamEvents', (req, res) => {
+    res.render('kalasangamEvents');
+  });
+
 
 // ✅ Dummy Data for Committees
 const committees = [
