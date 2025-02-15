@@ -42,19 +42,17 @@ const events = {
     }
 };
 
-// Route for event details
-app.get('/event-details', (req, res) => {
-    const eventSlug = req.query.event;
-    if (events[eventSlug]) {
-        res.render('event-details', events[eventSlug]);
-    } else {
-        res.status(404).send('Event not found');
-    }
+// Event Details Route
+app.get('/event-details/:eventName', (req, res) => {
+    const eventName = req.params.eventName; // Extract event name from URL
+    res.render('event-details', { eventName }); // Pass eventName to EJS
 });
 
 app.get('/kalasangamEvents', (req, res) => {
     res.render('kalasangamEvents');
   });
+
+
 
 
 // ✅ Dummy Data for Committees
