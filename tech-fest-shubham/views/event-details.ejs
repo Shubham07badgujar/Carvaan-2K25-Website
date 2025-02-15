@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Details - <%= eventName %></title>
+    <title>Event Details - <%= eventName ? eventName : 'Unknown Event' %></title>
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <style>
@@ -40,16 +41,22 @@
         <!-- Event Card -->
         <div class="card max-w-lg mx-auto p-6 rounded-lg shadow-xl">
             <div class="flex justify-center mb-6">
-                <img src="<%= eventImage %>" alt="<%= eventName %>" class="h-32 w-32 object-cover rounded-full mb-4" />
+                <!-- Check if eventImage exists before displaying it -->
+                <img src="<%= eventImage || '/path/to/default-image.jpg' %>" alt="<%= eventName || 'Event Image' %>" class="h-32 w-32 object-cover rounded-full mb-4" />
             </div>
-            <h1 class="text-4xl font-bold text-center title-transition mb-4"><%= eventName %></h1>
-            <p class="text-xl text-center mb-6 opacity-75"><%= eventDescription %></p>
+            <h1 class="text-4xl font-bold text-center title-transition mb-4"><%= eventName || 'Event Name Not Available' %></h1>
+            <p class="text-xl text-center mb-6 opacity-75"><%= eventDescription || 'Description not available' %></p>
             <div class="transition duration-500 ease-in-out transform hover:scale-110">
                 <h3 class="text-2xl font-semibold mb-2">Details:</h3>
                 <ul class="list-disc pl-6 text-lg">
-                    <% eventDetails.forEach(function(detail) { %>
-                        <li><%= detail %></li>
-                    <% }); %>
+                    <!-- Loop through eventDetails, ensure it's an array -->
+                    <% if (Array.isArray(eventDetails)) { %>
+                        <% eventDetails.forEach(function(detail) { %>
+                            <li><%= detail %></li>
+                        <% }); %>
+                    <% } else { %>
+                        <li>No details available</li>
+                    <% } %>
                 </ul>
             </div>
 
