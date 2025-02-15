@@ -48,6 +48,10 @@ app.get('/event-details/:eventName', (req, res) => {
     res.render('event-details', { eventName }); // Pass eventName to EJS
 });
 
+app.get('/kalasangamEvents', (req, res) => {
+    res.render('kalasangamEvents');
+  });
+
 
 
 
