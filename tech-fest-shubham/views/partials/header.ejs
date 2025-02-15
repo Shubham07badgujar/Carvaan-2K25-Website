@@ -6,7 +6,7 @@
 
 
 <!-- Navbar Component -->
-<nav class="bg-white border border-gray-200 dark:border-gray-700 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 shadow">
+<nav class="bg-white border border-gray-200 dark:border-gray-700 px-2 sm:px-4 py-2.5 shadow">
   <div class="nav-container flex flex-wrap justify-between items-center mx-auto">
     <div class="flex items-center">
       <img src="./images/kalasangamLogo.png" alt="College Logo" class="w-16 h-12" />
@@ -78,25 +78,25 @@
         opacity: 0,
         y: 20,
         duration: 0.8,
-        stagger: 0.8,
+        stagger: 0.4,
         ease: "power2.out"
       });
     }
   });
 
   gsap.from(".nav-container", {
-    x: -30,
     opacity: 0,
-    duration: 1.5,
+    duration: 2,
     ease: "power2.out"
+
   });
 
   gsap.from("ul li", {
     opacity: 0,
-    y: 20,
+    y: -20,
     duration: 1,
-    stagger: 0.3,
-    ease: "power2.out"
+    stagger: 0.4,
+    ease: "elastic.out(1,0.3)"
   });
 </script>
 
