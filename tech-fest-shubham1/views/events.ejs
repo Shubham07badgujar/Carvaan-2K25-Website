@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Carvaan - Events</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background: #0b0f1a;
+      color: #ffffff;
+    }
+
+    .event-card {
+      background: linear-gradient(135deg, rgba(15, 15, 15, 0.9), rgba(10, 20, 30, 0.95));
+      border: 2px solid rgba(0, 255, 204, 0.2);
+      color: #ffffff;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .event-card:hover {
+      transform: scale(1.05);
+      border: 2px solid #00ffcc;
+      box-shadow: 0px 0px 20px rgba(0, 255, 204, 0.5);
+    }
+
+    .event-title {
+      color: #00ffcc;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .event-link {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .event-link:hover {
+      text-decoration: underline;
+      color: #00ff99;
+    }
+
+    .btn {
+      padding: 0.7rem 2rem;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      background-color: rgb(14, 14, 26);
+      color: rgb(234, 234, 234);
+      font-weight: 700;
+      transition: 0.6s;
+      box-shadow: 0px 0px 40px #1f4c65;
+    }
+
+    .btn:hover {
+      background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+      color: rgb(4, 4, 38);
+    }
+  </style>
+</head>
+<body>
+  <%- include('./partials/header') %>
+
+  <main class="container mx-auto p-4">
+    <h2 class="text-3xl font-bold text-center mb-8 text-teal-400">Events</h2>
+
+    <!-- Departmental Events -->
+    <section class="mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Computer Science -->
+        <div class="event-card">
+          <h4 class="event-title">Computer Science</h4>
+          <ul>
+            <li><a href="/event-details" class="event-link">Hackathon</a></li>
+            <li><a href="/event-details" class="event-link">Code Wars</a></li>
+          </ul>
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <button class="btn">Register</button>
+            <button class="btn">View Details</button>
+          </div>
+        </div>
+
+        <!-- Electrical -->
+        <div class="event-card">
+          <h4 class="event-title">Electrical</h4>
+          <ul>
+            <li><a href="/event-details" class="event-link">Circuit Design</a></li>
+            <li><a href="/event-details" class="event-link">Robotics</a></li>
+          </ul>
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <button class="btn">Register</button>
+            <button class="btn">View Details</button>
+          </div>
+        </div>
+
+        <!-- Mechanical -->
+        <div class="event-card">
+          <h4 class="event-title">Mechanical</h4>
+          <ul>
+            <li><a href="/event-details" class="event-link">Machine Design</a></li>
+            <li><a href="/event-details" class="event-link">Build-a-Drone</a></li>
+          </ul>
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <button class="btn">Register</button>
+            <button class="btn">View Details</button>
+          </div>
+        </div>
+
+        <!-- Civil -->
+        <div class="event-card">
+          <h4 class="event-title">Civil</h4>
+          <ul>
+            <li><a href="/event-details" class="event-link">Bridge Building</a></li>
+            <li><a href="/event-details" class="event-link">Concrete Mix Challenge</a></li>
+          </ul>
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <button class="btn">Register</button>
+            <button class="btn">View Details</button>
+          </div>
+        </div>
+
+        <!-- Electronics -->
+        <div class="event-card">
+          <h4 class="event-title">Electronics & Telecommunication</h4>
+          <ul>
+            <li><a href="/event-details" class="event-link">IoT Challenge</a></li>
+            <li><a href="/event-details" class="event-link">Embedded Systems</a></li>
+          </ul>
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <button class="btn">Register</button>
+            <button class="btn">View Details</button>
+          </div>
+        </div>
+
+        <!-- Instrumentation -->
+        <div class="event-card">
+          <h4 class="event-title">Instrumentation</h4>
+          <ul>
+            <li><a href="/event-details" class="event-link">Bio-Hackathon</a></li>
+            <li><a href="/event-details" class="event-link">Genetic Engineering</a></li>
+          </ul>
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <button class="btn">Register</button>
+            <button class="btn">View Details</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Drone Club & Special Events -->
+    <section class="mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Drone Club -->
+        <div class="event-card">
+          <h4 class="event-title">Drone Club</h4>
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <button class="btn">Register</button>
+            <button class="btn">View Details</button>
+          </div>
+        </div>
+
+        <!-- Aesterix -->
+        <div class="event-card">
+          <h4 class="event-title">Aesterix</h4>
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <button class="btn">Register</button>
+            <button class="btn">View Details</button>
+          </div>
+        </div>
+
+        <!-- Shutterbugs -->
+        <div class="event-card">
+          <h4 class="event-title">Shutterbugs</h4>
+          <div class="flex flex-wrap justify-center gap-2 mt-4">
+            <button class="btn">Register</button>
+            <button class="btn">View Details</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <%- include("./partials/footer") %>
+</body>
+</html>
