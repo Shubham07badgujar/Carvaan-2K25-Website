@@ -23,7 +23,7 @@ app.get('/about', (req, res) => res.render('about'))
 app.get('/contact', (req, res) => res.render('contact'))
 app.get('/admin', (req, res) => res.render('admin-dashboard'))
 app.get('/events', (req, res) => res.render('events'))
-app.get('/event-details', (req, res) => res.render('event-details'))
+// app.get('/event-details', (req, res) => res.render('event-details'))
 app.get('/registration', (req, res) => res.render('registration'))
 app.get('/payment', (req, res) => res.render('payment'))
 app.get('/workshop', (req, res) => res.render('workshop'))
@@ -50,7 +50,8 @@ app.get('/event-details/:eventName', (req, res) => {
 
 app.get('/kalasangamEvents', (req, res) => {
     res.render('kalasangamEvents');
-  });
+});
+
 
 
 
