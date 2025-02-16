@@ -9,34 +9,42 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
 <style>
     body {
-        font-family: "Roboto Condensed", serif;
-
+        font-family: "Roboto Condensed", sans-serif;
     }
 </style>
 
-<body class="text-white">
+<body class="text-black"> <!-- Default text color set to black -->
 
     <!-- Header -->
     <%- include('./partials/header') %>
 
-        <div class="container mx-auto py-10 text-center">
-            <h2 class="text-4xl font-bold text-yellow-400">About Our Fest</h2>
-            <p class="text-lg text-gray-300 mt-4 px-6">
-                <span class="text-blue-400 font-semibold">Government College of Engineering</span> proudly presents
-                <span class="text-green-400 font-semibold">Tech-Fest</span> - the biggest and most thrilling
-                technological extravaganza of the year!
-                This festival is a powerhouse of innovation, creativity, and competition, where students showcase their
-                talent
-                in robotics, coding, AI, and more. Get ready to witness a blend of **technology & excitement**, where
-                **brilliance meets opportunity!**
-            </p>
-        </div>
+    <div class="container mx-auto py-10 text-center bg-gray-900 text-white rounded-lg shadow-lg p-6">
+        <h2 class="text-4xl font-bold text-yellow-400">About Our Fest</h2>
+        <p class="text-lg text-gray-300 mt-4 px-6">
+            <span class="text-blue-400 font-semibold">Government College of Engineering</span> is a prestigious institution 
+            known for its excellence in technical education and innovation. The college fosters a vibrant academic environment, 
+            empowering students to push the boundaries of technology and creativity.
+        </p>
+
+        <p class="text-lg text-gray-300 mt-4 px-6">
+            As a testament to this spirit, our college hosts <span class="text-green-400 font-semibold">Tech-Fest</span>, the grandest 
+            technological extravaganza of the year! This festival brings together brilliant minds to compete in areas such as 
+            robotics, artificial intelligence, coding, and more. It is a perfect blend of <span class="text-yellow-400 font-semibold">technology and excitement</span>, 
+            where <span class="text-blue-400 font-semibold">brilliance meets opportunity!</span>
+        </p>
+
+        <p class="text-lg text-gray-300 mt-4 px-6">
+            Alongside Tech-Fest, we also proudly organize <span class="text-blue-400 font-semibold">Tech Carvaan 2K24</span> – a hub for future innovators, 
+            featuring cutting-edge competitions and workshops. On the cultural front, <span class="text-red-400 font-semibold">Kalasangam</span> 
+            showcases the artistic brilliance of our students through dance, music, drama, and creative performances. These events 
+            not only celebrate technical excellence but also foster a spirit of creativity and teamwork.
+        </p>
+    </div>
 
 </body>
 
