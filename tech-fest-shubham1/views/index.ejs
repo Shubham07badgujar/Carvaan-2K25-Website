@@ -44,6 +44,18 @@
   .section2 {
     width: 100%;
   }
+
+  @media (max-width: 1318px) {
+    .hero-text p {
+      font-size: 50px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .hero-text p {
+      font-size: 20px;
+    }
+  }
 </style>
 
 <body>
@@ -168,7 +180,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Map -->
 
     <section class="bg-gray-100">
       <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
@@ -191,19 +203,6 @@
 
 
 </body>
-<style>
-  @media (max-width: 1318px) {
-    .hero-text p {
-      font-size: 50px;
-    }
-  }
-
-  @media (max-width: 1000px) {
-    .hero-text p {
-      font-size: 20px;
-    }
-  }
-</style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -211,6 +210,15 @@
 <script>
   window.addEventListener("load", () => {
     var tl = gsap.timeline();
+    // const cursor = document.querySelector("#cursor");
+    // document.addEventListener("mousemove", (event) => {
+    //   gsap.to(cursor, {
+    //     x: event.clientX,
+    //     y: event.clientY,
+    //     duration: 0.5,
+    //     ease: "elastic.out(1,0.5)",
+    //   });
+    // });
 
     gsap.from(".hero-text p", {
       x: -200,
@@ -226,6 +234,36 @@
       ease: "circ.out",
     });
 
+    // document
+    //   .querySelector(".hero-text p")
+    //   .addEventListener("mouseenter", () => {
+    //     gsap.to(".hero-text p", {
+    //       scale: 0.95,
+    //       opacity: 1,
+    //       ease: "circ.out",
+    //     });
+
+    //     gsap.to("#cursor", {
+    //       scale: 2.5,
+    //     });
+    //     cursor.innerHTML = "Join";
+    //   });
+
+    // document
+    //   .querySelector(".hero-text p")
+    //   .addEventListener("mouseleave", () => {
+    //     gsap.to(".hero-text p", {
+    //       scale: 1,
+    //       opacity: 1,
+    //       ease: "circ.out",
+    //     });
+
+    //     gsap.to("#cursor", {
+    //       scale: 1,
+    //     });
+    //     cursor.innerHTML = "";
+    //   });
+
     document
       .querySelector(".hero-text a")
       .addEventListener("mouseenter", () => {
@@ -237,6 +275,12 @@
           scale: 1.1,
           ease: "circ.out",
         });
+
+        // gsap.to("#cursor", {
+        //   scale: 2.5,
+        // });
+
+        // cursor.innerHTML = "Explore Now !";
       });
 
     document
@@ -250,6 +294,11 @@
           scale: 1,
           ease: "power2.out",
         });
+
+        // gsap.to("#cursor", {
+        //   scale: 1,
+        // });
+        // cursor.innerHTML = "";
       });
 
     tl.from(".section2 .elem1", {
@@ -264,6 +313,23 @@
         scrub: 2,
       },
     });
+    // document
+    //   .querySelector(".section2 .elem1")
+    //   .addEventListener("mouseenter", () => {
+    //     gsap.to("#cursor", {
+    //       scale: 2.5,
+    //     });
+
+    //     cursor.innerHTML = "Explore Kalasangam";
+    //   });
+    // document
+    //   .querySelector(".section2 .elem1")
+    //   .addEventListener("mouseleave", () => {
+    //     gsap.to("#cursor", {
+    //       scale: 1,
+    //     });
+    //     cursor.innerHTML = "";
+    //   });
 
     tl.from(".section2 .elem2", {
       x: 400,
@@ -277,6 +343,23 @@
         scrub: 2,
       },
     });
+    // document
+    //   .querySelector(".section2 .elem2")
+    //   .addEventListener("mouseenter", () => {
+    //     gsap.to("#cursor", {
+    //       scale: 2.5,
+    //     });
+
+    //     cursor.innerHTML = "Explore Carvaan";
+    //   });
+    // document
+    //   .querySelector(".section2 .elem2")
+    //   .addEventListener("mouseleave", () => {
+    //     gsap.to("#cursor", {
+    //       scale: 1,
+    //     });
+    //     cursor.innerHTML = "";
+    //   });
 
     tl.from(".section2 .elem3", {
       x: -400,
@@ -290,6 +373,23 @@
         scrub: 2,
       },
     });
+    // document
+    //   .querySelector(".section2 .elem3")
+    //   .addEventListener("mouseenter", () => {
+    //     gsap.to("#cursor", {
+    //       scale: 2.5,
+    //     });
+
+    //     cursor.innerHTML = "Explore Tech Carvaan";
+    //   });
+    // document
+    //   .querySelector(".section2 .elem3")
+    //   .addEventListener("mouseleave", () => {
+    //     gsap.to("#cursor", {
+    //       scale: 1,
+    //     });
+    //     cursor.innerHTML = "";
+    //   });
 
     document.querySelectorAll(".section2 button").forEach((button) => {
       button.addEventListener("mouseenter", () => {
