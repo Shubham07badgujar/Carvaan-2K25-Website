@@ -47,19 +47,23 @@
     <div class="relative overflow-hidden w-full max-w-4xl mx-auto rounded-lg shadow-lg">
 
         <!-- Carousel Items -->
-        <div class="carousel flex transition-transform duration-500 ease-in-out" style="width: 300%">
+        <div class="carousel flex transition-transform duration-500 ease-in-out" style="width: 100%">
             <img src="/images/bg.jpeg" alt="Event Image 1" class="w-1/3 object-cover">
-            <img src="/images/building2.jpg" alt="Event Image 2" class="w-1/3 object-cover">
-            <img src="/images/carvaan.png" alt="Event Image 3" class="w-1/3 object-cover">
+            <img src="/images/flash.jpg" alt="Event Image 3" class="w-1/3 object-cover">
+            <img src="/images/mob.jpg" alt="Event Image 3" class="w-1/3 object-cover">
+            <img src="/images/dance.jpg" alt="Event Image 3" class="w-1/3 object-cover">
+            <img src="/images/drama.jpg" alt="Event Image 3" class="w-1/3 object-cover">
+            <img src="/images/drama1.jpg" alt="Event Image 3" class="w-1/3 object-cover">
         </div>
 
         <!-- Carousel Navigation -->
-        <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 hover:bg-gray-700" onclick="prevSlide()">
-            &#9664;
-        </button>
-        <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 hover:bg-gray-700" onclick="nextSlide()">
-            &#9654;
-        </button>
+<button class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-4xl hover:scale-110 transition-transform focus:outline-none" onclick="prevSlide()">
+    &#9664;
+</button>
+<button class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-4xl hover:scale-110 transition-transform focus:outline-none" onclick="nextSlide()">
+    &#9654;
+</button>
+
     </div>
 </div>
 
@@ -92,10 +96,7 @@
         showSlide(currentIndex + 1);
     }
 
-    // Auto-slide
-    setInterval(() => {
-        nextSlide();
-    }, 5000);
+    
 </script>
 
 </body>
