@@ -52,6 +52,12 @@ app.get("/kalasangamEvents", (req, res) => {
   res.render("kalasangamEvents");
 });
 
+app.get('/test', (req, res) => {
+    res.render('test');
+});
+
+
+
 // ✅ Dummy Data for Committees
 const committees = [
   { name: "AI Club", coordinator: "Alice", coCoordinators: ["Bob", "Charlie"] },
