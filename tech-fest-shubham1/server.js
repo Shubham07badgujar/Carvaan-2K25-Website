@@ -52,7 +52,9 @@ app.get('/kalasangamEvents', (req, res) => {
     res.render('kalasangamEvents');
 });
 
-
+app.get('/test', (req, res) => {
+    res.render('test');
+});
 
 
 
