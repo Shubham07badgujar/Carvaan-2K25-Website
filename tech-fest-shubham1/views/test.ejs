@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Event Card</title>
+</head>
+
+<body class=" flex items-center justify-center min-h-screen">
+    <% arr.forEach(card=> { %>
+        <div class="bg-gray-900 p-5 rounded-lg w-full max-w-md mt-10">
+            <div class="relative h-[290px] w-full group cursor-pointer overflow-hidden">
+                <div class="absolute inset-0 bg-[#020617] rounded-lg overflow-hidden">
+                    <img src="/images/FineArts.png" alt="Event background"
+                        class="object-cover w-full h-full transition-all duration-300 group-hover:opacity-20">
+                </div>
+                <div class="absolute inset-0 p-4 flex flex-col justify-between">
+                    <div class="bg-black bg-opacity-50 text-center p-2 rounded">
+                        <h3 class="text-xl font-mono text-white">
+                            <%= card.name %>
+                        </h3>
+                        <p class="text-sm font-mono text-gray-300">Computer Department</p>
+                    </div>
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-full p-4 bg-black/50 backdrop-blur-sm rounded-b-lg transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
+                    <p class="text-gray-200 font-mono text-sm text-center">
+                        <%= card.description %>
+                    </p>
+                </div>
+            </div>
+            <div class="mt-4 flex justify-center gap-4">
+                <button
+                    class="inline-flex items-center justify-center gap-2 text-sm font-mono border border-green-800 hover:bg-sky-500/10 h-11 rounded-md px-8 bg-transparent text-white transition-colors relative">
+                    <span class="relative z-10">Register</span>
+                </button>
+                <button
+                    class="inline-flex items-center justify-center gap-2 text-sm font-mono border border-green-800 hover:bg-sky-500/10 h-11 rounded-md px-8 bg-transparent text-white transition-colors relative">
+                    <span class="relative z-10">View Details</span>
+                </button>
+            </div>
+        </div>
+        <% }); %>
+</body>
+
+</html>
