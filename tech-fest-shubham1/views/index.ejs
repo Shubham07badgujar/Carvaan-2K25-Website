@@ -60,17 +60,7 @@
       }
     }
 
-    .swiper-wrapper {
-      width: 100%;
-      height: max-content !important;
-      padding-bottom: 64px !important;
-      -webkit-transition-timing-function: linear !important;
-      transition-timing-function: linear !important;
-      position: relative;
-    }
-    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-      background: #4f46e5 !important;
-    }
+    /* ============ Carousel CSS ============= */
   </style>
 
   <body>
@@ -234,46 +224,58 @@
       </div>
     </section>
 
-    <div>
-      <!--HTML CODE-->
-      <div class="w-full relative">
-        <div class="swiper progress-slide-carousel swiper-container relative">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div
-                class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center"
-              >
-                <span class="text-3xl font-semibold text-indigo-600"
-                  >Slide 1
-                </span>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center"
-              >
-                <span class="text-3xl font-semibold text-indigo-600"
-                  >Slide 2
-                </span>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center"
-              >
-                <span class="text-3xl font-semibold text-indigo-600"
-                  >Slide 3
-                </span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="swiper-pagination !bottom-2 !top-auto !w-80 right-0 mx-auto bg-gray-100"
-          ></div>
-        </div>
-      </div>
-    </div>
+    <!-- ============== Carousel ================ -->
 
+    <div class="bg-gray-100">
+      <div class="container mx-auto px-4 py-8">
+          <div class="relative overflow-hidden">
+              <!-- Carousel Wrapper -->
+              <div class="overflow-hidden w-full">
+                  <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+                      <!-- Carousel Items (Duplicated for Infinite Loop) -->
+                      <div class="w-1/4 flex-shrink-0">
+                          <img src="images/download (1).jpeg" alt="Memory 1" class="w-full h-64">
+                      </div>
+                      <div class="w-1/4 flex-shrink-0">
+                          <img src="images/images.jpeg" alt="Memory 2" class="w-full h-64">
+                      </div>
+                      <div class="w-1/4 flex-shrink-0">
+                          <img src="images/dance.jpg" alt="Memory 3" class="w-full h-64">
+                      </div>
+                      <div class="w-1/4 flex-shrink-0">
+                          <img src="images/drama1.jpg" alt="Memory 4" class="w-full h-64">
+                      </div>
+                      <div class="w-1/4 flex-shrink-0">
+                          <img src="images/drama1.jpg" alt="Memory 5" class="w-full h-64">
+                      </div>
+                      
+                      
+                      <!-- Cloned items for infinite loop effect -->
+                      <div class="w-1/4 flex-shrink-0">
+                          <img src="images/download (1).jpeg" alt="Memory 1 Clone" class="w-full h-64">
+                      </div>
+                      <div class="w-1/4 flex-shrink-0">
+                          <img src="images/images.jpeg" alt="Memory 2 Clone" class="w-full h-64">
+                      </div>
+                      <div class="w-1/4 flex-shrink-0">
+                        <img src="images/images.jpeg" alt="Memory 2 Clone" class="w-full h-64">
+                      </div>
+                      <div class="w-1/4 flex-shrink-0">
+                        <img src="images/images.jpeg" alt="Memory 2 Clone" class="w-full h-64">
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Navigation Buttons -->
+              <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md hover:bg-opacity-75">
+                  &larr;
+              </button>
+              <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md hover:bg-opacity-75">
+                  &rarr;
+              </button>
+          </div>
+      </div>
+  </div>
     <!-- Map -->
 
     <section class="bg-gray-100">
@@ -437,17 +439,60 @@
       });
     });
 
-    var swiper = new Swiper(".progress-slide-carousel", {
-      loop: true,
-      fraction: true,
-      autoplay: {
-        delay: 1200,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".progress-slide-carousel .swiper-pagination",
-        type: "progressbar",
-      },
-    });
+    //Carousel
+
+    
+    const carousel = document.getElementById('carousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const items = document.querySelectorAll('#carousel > div');
+    const totalItems = items.length;
+    let currentIndex = 0;
+    const visibleItems = 3; // Number of visible images
+    
+    function updateCarousel() {
+        const offset = -currentIndex * (100 / visibleItems);
+        carousel.style.transition = 'transform 0.7s ease-in-out';
+        carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+        if (currentIndex >= totalItems - visibleItems) {
+            currentIndex = 0;
+            carousel.style.transition = 'none'; // Remove transition for seamless loop
+            carousel.style.transform = `translateX(0%)`;
+            setTimeout(() => {
+                carousel.style.transition = 'transform 0.7s ease-in-out';
+                currentIndex++;
+                updateCarousel();
+            }, 50);
+        } else {
+            currentIndex++;
+            updateCarousel();
+        }
+    }
+
+    function prevSlide() {
+        if (currentIndex <= 0) {
+            currentIndex = totalItems - visibleItems;
+            carousel.style.transition = 'none';
+            carousel.style.transform = `translateX(-${currentIndex * (100 / visibleItems)}%)`;
+            setTimeout(() => {
+                carousel.style.transition = 'transform 0.7s ease-in-out';
+                currentIndex--;
+                updateCarousel();
+            }, 50);
+        } else {
+            currentIndex--;
+            updateCarousel();
+        }
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Automatic sliding with seamless loop
+    setInterval(nextSlide, 3000); // Slide every 3 seconds
+
   </script>
 </html>
