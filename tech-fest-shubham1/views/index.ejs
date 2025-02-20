@@ -186,20 +186,40 @@
 
     <section class="bg-gray-100">
       <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
-        <div class="max-w-2xl lg:max-w-4xl mx-auto text-center">
-          <h2 class="text-3xl font-extrabold text-gray-900">Visit Our Location</h2>
-          <p class="mt-4 text-lg text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="mt-16 lg:mt-20">
-          <div class="rounded-lg overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2500.412035547703!2d75.55032715400611!3d21.00308670680377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd90fc9945a06b3%3A0x2adbed89161ccac2!2sGovernment%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1739808523253!5m2!1sen!2sin"
-              width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy">
-            </iframe>
+          <div class="max-w-2xl lg:max-w-4xl mx-auto text-center">
+              <h2 class="text-3xl font-extrabold text-gray-900">Visit Our Location</h2>
+              <p class="mt-4 text-lg text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
-        </div>
+          <div class="mt-16 lg:mt-20">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div class="rounded-lg overflow-hidden">
+                      <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11672.945750644447!2d-122.42107853750231!3d37.7730507907087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858070cc2fbd55%3A0xa71491d736f62d5c!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1619524992238!5m2!1sen!2sus"
+                          width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                  <div>
+                      <div class="max-w-full mx-auto rounded-lg overflow-hidden">
+                          <div class="px-6 py-4">
+                              <h3 class="text-lg font-medium text-gray-900">Our Address</h3>
+                              <p class="mt-1 text-gray-600">123 Main St, San Francisco, CA 94105</p>
+                          </div>
+                          <div class="border-t border-gray-200 px-6 py-4">
+                              <h3 class="text-lg font-medium text-gray-900">Hours</h3>
+                              <p class="mt-1 text-gray-600">Monday - Friday: 9am - 5pm</p>
+                              <p class="mt-1 text-gray-600">Saturday: 10am - 4pm</p>
+                              <p class="mt-1 text-gray-600">Sunday: Closed</p>
+                          </div>
+                          <div class="border-t border-gray-200 px-6 py-4">
+                              <h3 class="text-lg font-medium text-gray-900">Contact</h3>
+                              <p class="mt-1 text-gray-600">Email: info@example.com</p>
+                              <p class="mt-1 text-gray-600">Phone: +1 23494 34993</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </section>
+  </section>
 
     <%- include('./partials/footer')%>
 
@@ -212,15 +232,7 @@
 <script>
   window.addEventListener("load", () => {
     var tl = gsap.timeline();
-    // const cursor = document.querySelector("#cursor");
-    // document.addEventListener("mousemove", (event) => {
-    //   gsap.to(cursor, {
-    //     x: event.clientX,
-    //     y: event.clientY,
-    //     duration: 0.5,
-    //     ease: "elastic.out(1,0.5)",
-    //   });
-    // });
+
 
     gsap.from(".hero-text p", {
       x: -200,
@@ -236,35 +248,7 @@
       ease: "circ.out",
     });
 
-    // document
-    //   .querySelector(".hero-text p")
-    //   .addEventListener("mouseenter", () => {
-    //     gsap.to(".hero-text p", {
-    //       scale: 0.95,
-    //       opacity: 1,
-    //       ease: "circ.out",
-    //     });
 
-    //     gsap.to("#cursor", {
-    //       scale: 2.5,
-    //     });
-    //     cursor.innerHTML = "Join";
-    //   });
-
-    // document
-    //   .querySelector(".hero-text p")
-    //   .addEventListener("mouseleave", () => {
-    //     gsap.to(".hero-text p", {
-    //       scale: 1,
-    //       opacity: 1,
-    //       ease: "circ.out",
-    //     });
-
-    //     gsap.to("#cursor", {
-    //       scale: 1,
-    //     });
-    //     cursor.innerHTML = "";
-    //   });
 
     document
       .querySelector(".hero-text a")
@@ -278,11 +262,6 @@
           ease: "circ.out",
         });
 
-        // gsap.to("#cursor", {
-        //   scale: 2.5,
-        // });
-
-        // cursor.innerHTML = "Explore Now !";
       });
 
     document
@@ -297,10 +276,7 @@
           ease: "power2.out",
         });
 
-        // gsap.to("#cursor", {
-        //   scale: 1,
-        // });
-        // cursor.innerHTML = "";
+        
       });
 
     tl.from(".section2 .elem1", {
@@ -315,23 +291,7 @@
         scrub: 2,
       },
     });
-    // document
-    //   .querySelector(".section2 .elem1")
-    //   .addEventListener("mouseenter", () => {
-    //     gsap.to("#cursor", {
-    //       scale: 2.5,
-    //     });
 
-    //     cursor.innerHTML = "Explore Kalasangam";
-    //   });
-    // document
-    //   .querySelector(".section2 .elem1")
-    //   .addEventListener("mouseleave", () => {
-    //     gsap.to("#cursor", {
-    //       scale: 1,
-    //     });
-    //     cursor.innerHTML = "";
-    //   });
 
     tl.from(".section2 .elem2", {
       x: 400,
@@ -345,23 +305,6 @@
         scrub: 2,
       },
     });
-    // document
-    //   .querySelector(".section2 .elem2")
-    //   .addEventListener("mouseenter", () => {
-    //     gsap.to("#cursor", {
-    //       scale: 2.5,
-    //     });
-
-    //     cursor.innerHTML = "Explore Carvaan";
-    //   });
-    // document
-    //   .querySelector(".section2 .elem2")
-    //   .addEventListener("mouseleave", () => {
-    //     gsap.to("#cursor", {
-    //       scale: 1,
-    //     });
-    //     cursor.innerHTML = "";
-    //   });
 
     tl.from(".section2 .elem3", {
       x: -400,
@@ -375,23 +318,7 @@
         scrub: 2,
       },
     });
-    // document
-    //   .querySelector(".section2 .elem3")
-    //   .addEventListener("mouseenter", () => {
-    //     gsap.to("#cursor", {
-    //       scale: 2.5,
-    //     });
 
-    //     cursor.innerHTML = "Explore Tech Carvaan";
-    //   });
-    // document
-    //   .querySelector(".section2 .elem3")
-    //   .addEventListener("mouseleave", () => {
-    //     gsap.to("#cursor", {
-    //       scale: 1,
-    //     });
-    //     cursor.innerHTML = "";
-    //   });
 
     document.querySelectorAll(".section2 button").forEach((button) => {
       button.addEventListener("mouseenter", () => {
