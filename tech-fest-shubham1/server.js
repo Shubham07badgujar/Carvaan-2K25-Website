@@ -32,6 +32,11 @@ app.get("/kalasangamEvents", (req, res) => {
   res.render("kalasangamEvents");
 });
 
+app.get('/writing', (req, res) => {
+  res.render('writing');
+});
+
+
 
 // ✅ Serve `header.html` correctly
 // app.get("/header.html", (req, res) =>
