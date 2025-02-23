@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Event Cards</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS for tech-themed cards */
+        .event-card {
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            border: 1px solid #333;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 255, 150, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 255, 150, 0.4);
+        }
+
+        .event-title {
+            color: #00ff99; /* Neon green */
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0, 255, 150, 0.7);
+        }
+
+        .event-card p {
+            color: #b3b3b3; /* Light gray for text */
+        }
+
+        .btn {
+            background: linear-gradient(145deg, #00ff99, #00cc77);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(145deg, #00cc77, #00ff99);
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #00ff99;
+            color: #00ff99;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 255, 150, 0.1);
+        }
+
+        body {
+            background: #121212; /* Dark background */
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body class="p-6">
+
+  <%- include('./partials/header') %>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1: Code Sphere -->
+        <div class="event-card p-6">
+            <h4 class="event-title">Code Sphere</h4>
+            <p class="mt-2">A coding competition for tech enthusiasts. Solve real-world problems and showcase your skills.</p>
+            <div class="flex flex-wrap justify-center gap-2 mt-4">
+                <button class="btn">Register</button>
+                <button class="btn btn-secondary">View Details</button>
+            </div>
+        </div>
+
+        <!-- Card 2: Robo Wars -->
+        <div class="event-card p-6">
+            <h4 class="event-title">Robo Wars</h4>
+            <p class="mt-2">Battle of robots in an epic showdown. Build, code, and compete!</p>
+            <div class="flex flex-wrap justify-center gap-2 mt-4">
+                <button class="btn">Register</button>
+                <button class="btn btn-secondary">View Details</button>
+            </div>
+        </div>
+
+        <!-- Card 3: Hackathon -->
+        <div class="event-card p-6">
+            <h4 class="event-title">Hackathon</h4>
+            <p class="mt-2">Innovate and build solutions in 24 hours. Collaborate, code, and win prizes!</p>
+            <div class="flex flex-wrap justify-center gap-2 mt-4">
+                <button class="btn">Register</button>
+                <button class="btn btn-secondary">View Details</button>
+            </div>
+        </div>
+
+        <!-- Card 4: Quiz Master -->
+        <div class="event-card p-6">
+            <h4 class="event-title">Quiz Master</h4>
+            <p class="mt-2">Test your knowledge in a fun tech quiz. Are you the ultimate tech guru?</p>
+            <div class="flex flex-wrap justify-center gap-2 mt-4">
+                <button class="btn">Register</button>
+                <button class="btn btn-secondary">View Details</button>
+            </div>
+        </div>
+
+        <!-- Card 5: Design Fest -->
+        <div class="event-card p-6">
+            <h4 class="event-title">Design Fest</h4>
+            <p class="mt-2">Showcase your creativity in UI/UX design. Design the future!</p>
+            <div class="flex flex-wrap justify-center gap-2 mt-4">
+                <button class="btn">Register</button>
+                <button class="btn btn-secondary">View Details</button>
+            </div>
+        </div>
+
+        <!-- Card 6: Cultural Night -->
+        <div class="event-card p-6">
+            <h4 class="event-title">Cultural Night</h4>
+            <p class="mt-2">Celebrate diversity through performances. A night of fun and culture!</p>
+            <div class="flex flex-wrap justify-center gap-2 mt-4">
+                <button class="btn">Register</button>
+                <button class="btn btn-secondary">View Details</button>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('partials/footer') %>
+</body>
+</html>

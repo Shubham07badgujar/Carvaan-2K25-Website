@@ -22,7 +22,7 @@ app.get("/", (req, res) => res.render("index"));
 app.get("/about", (req, res) => res.render("about"));
 app.get("/contact", (req, res) => res.render("contact"));
 app.get("/admin", (req, res) => res.render("admin-dashboard"));
-app.get("/events", (req, res) => res.render("events"));
+app.get("/events2", (req, res) => res.render("events2"));
 // app.get('/event-details', (req, res) => res.render('event-details'))
 app.get("/registration", (req, res) => res.render("registration"));
 app.get("/payment", (req, res) => res.render("payment"));
@@ -65,7 +65,7 @@ app.get('/event-details/finearts', (req, res) => {
 
 // Routes
 app.use("/auth", authRoutes);
-app.use("/events", eventRoutes);
+app.use("/events2", eventRoutes);
 
 // Start server
 const PORT = process.env.PORT || 4000;
