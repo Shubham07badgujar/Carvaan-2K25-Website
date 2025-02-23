@@ -32,8 +32,8 @@ app.get("/kalasangamEvents", (req, res) => {
   res.render("kalasangamEvents");
 });
 
-app.get('/writing', (req, res) => {
-  res.render('writing');
+app.get('/event-details/writing', (req, res) => {
+  res.render('event-details/writing');
 });
 
 
