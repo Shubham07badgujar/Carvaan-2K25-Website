@@ -32,8 +32,28 @@ app.get("/kalasangamEvents", (req, res) => {
   res.render("kalasangamEvents");
 });
 
+app.get('/event-details/literary', (req, res) => {
+  res.render('event-details/literary');
+});
+
 app.get('/event-details/writing', (req, res) => {
   res.render('event-details/writing');
+});
+
+app.get('/event-details/music', (req, res) => {
+  res.render('event-details/music');
+});
+
+app.get('/event-details/dance', (req, res) => {
+  res.render('event-details/dance');
+});
+
+app.get('/event-details/theater', (req, res) => {
+  res.render('event-details/theater');
+});
+
+app.get('/event-details/finearts', (req, res) => {
+  res.render('event-details/finearts');
 });
 
 
