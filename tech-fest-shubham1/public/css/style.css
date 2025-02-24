@@ -5,9 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
-h1, h2, h3 {
+/* h1, h2, h3 {
     color: #333;
-}
+} */
 nav ul {
     list-style: none;
     display: flex;
@@ -32,7 +32,9 @@ nav ul li a {
     /* Centers inline elements */
     width: 100%;
     margin-top: 0px;
+    background-color: white;
     /* Adjust spacing if needed */
+    color: white;
 }
 
 .college-logo {
@@ -45,7 +47,7 @@ nav ul li a {
     /* Ensures the image maintains aspect ratio */
     display: block;
     margin: auto;
+    color: white;
 }
-
   
 
