@@ -1,117 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <title>Carvaan 2k25</title>
-    <link rel="stylesheet" href="public/css/style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <style>
-    html,
-    body {
-      width: 100%;
-      overflow-x: hidden;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Carvaan 2k25</title>
+  <link rel="stylesheet" href="public/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+<style>
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: "Roboto Condensed", serif;
+  }
+
+  .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero-text {
+    background-image: url("/images/building_2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .section2 {
+    width: 100%;
+  }
+
+  @media (max-width: 1318px) {
+    .hero-text p {
+      font-size: 50px;
     }
+  }
 
-    body {
-      font-family: "Roboto Condensed", serif;
+  @media (max-width: 1000px) {
+    .hero-text p {
+      font-size: 20px;
     }
+  }
 
-    .container {
-      max-width: 100%;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+  /* ============ Carousel CSS ============= */
+</style>
 
-    .hero-text {
-      background-image: url("/images/building_2.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100vh;
-      width: 100%;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .section2 {
-      width: 100%;
-    }
-
-    @media (max-width: 1318px) {
-      .hero-text p {
-        font-size: 50px;
-      }
-    }
-
-    @media (max-width: 1000px) {
-      .hero-text p {
-        font-size: 20px;
-      }
-    }
-
-    /* ============ Carousel CSS ============= */
-  </style>
-
-  <body>
-    <!-- Header with Navigation -->
-    <%- include('./partials/header')%>
+<body>
+  <!-- Header with Navigation -->
+  <%- include('./partials/header')%>
     <!-- <div id="cursor"></div> -->
 
     <!-- Hero Section -->
     <section class="text-center relative">
-      <div
-        class="hero-text relative h-screen flex flex-col items-center justify-center"
-      >
+      <div class="hero-text relative h-screen flex flex-col items-center justify-center">
         <p class="text-[70px] text-white font-extrabold mt-3">
           Join the National Level Cultural Event and Technical Event of Government College of Engineering Jalgaon.
         </p>
-        <a
-          href="#events-section"
-          class="mt-5 inline-block bg-[#73C7C7] text-black px-6 py-3 rounded"
-          >Explore Events</a
-        >
+        <a href="#events-section" class="mt-5 inline-block bg-[#73C7C7] text-black px-6 py-3 rounded">Explore Events</a>
       </div>
     </section>
 
     <!-- Events Section -->
-    <section
-      id="events-section"
-      class="section2 flex flex-col justify-center items-center relative container my-10"
-    >
+    <section id="events-section" class="section2 flex flex-col justify-center items-center relative container my-10">
       <h2 class="text-5xl text-center font-bold mb-5">Our Main Events</h2>
 
       <!-- card 1 -->
       <!-- <a href="./kalasangamEvents"> -->
-      <div
-        class="elem1 m-10 my-20 flex flex-col w-full bg-white rounded shadow-lg sm:w-3/4 md:w-1/2 lg:w-3/6"
-      >
-        <div
-          class="w-full h-64 bg-top bg-cover rounded-t"
-          style="background-image: url('images/kathakkali.jpg')"
-        ></div>
+      <div class="elem1 m-10 my-20 flex flex-col w-full bg-white rounded shadow-lg sm:w-3/4 md:w-1/2 lg:w-3/6">
+        <div class="w-full h-64 bg-top bg-cover rounded-t" style="background-image: url('images/kathakkali.jpg')"></div>
         <div class="flex flex-col w-full md:flex-row">
           <div
-            class="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-gray-400 rounded md:flex-col md:items-center md:justify-center md:w-1/4"
-          >
+            class="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-gray-400 rounded md:flex-col md:items-center md:justify-center md:w-1/4">
             <div class="md:text-3xl">Mar</div>
             <div class="md:text-6xl">26</div>
             <div class="md:text-xl">10 am</div>
           </div>
           <div class="p-4 font-normal text-gray-800 md:w-3/4">
-            <h1
-              class="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-800"
-            >
+            <h1 class="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-800">
               Kalasangam 2K25
             </h1>
             <p class="leading-normal">
@@ -124,9 +104,7 @@
             <div class="flex flex-row items-center mt-4 text-gray-700">
               <div class="w-1/2">Department</div>
               <div>
-                <button
-                  class="bg-black border-3 border-gray-300 px-4 py-2 rounded-md text-white"
-                >
+                <button class="bg-black border-3 border-gray-300 px-4 py-2 rounded-md text-white">
                   <a href="./kalasangamEvents">Explore</a>
                 </button>
               </div>
@@ -138,25 +116,17 @@
 
       <!-- card 2 -->
 
-      <div
-        class="elem2 m-10 my-20 flex flex-col w-full bg-white rounded shadow-lg sm:w-3/4 md:w-1/2 lg:w-3/6"
-      >
-        <div
-          class="w-full h-64 bg-top bg-cover rounded-t"
-          style="background-image: url('images/carvaan.png')"
-        ></div>
+      <div class="elem2 m-10 my-20 flex flex-col w-full bg-white rounded shadow-lg sm:w-3/4 md:w-1/2 lg:w-3/6">
+        <div class="w-full h-64 bg-top bg-cover rounded-t" style="background-image: url('images/carvaan.png')"></div>
         <div class="flex flex-col w-full md:flex-row">
           <div
-            class="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-gray-400 rounded md:flex-col md:items-center md:justify-center md:w-1/4"
-          >
+            class="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-gray-400 rounded md:flex-col md:items-center md:justify-center md:w-1/4">
             <div class="md:text-3xl">Mar</div>
             <div class="md:text-6xl">26</div>
             <div class="md:text-xl">10 am</div>
           </div>
           <div class="p-4 font-normal text-gray-800 md:w-3/4">
-            <h1
-              class="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-800"
-            >
+            <h1 class="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-800">
               Tech Carvaan 2K25
             </h1>
             <p class="leading-normal">
@@ -169,9 +139,7 @@
             <div class="flex flex-row items-center mt-4 text-gray-700">
               <div class="w-1/2">Department</div>
               <div>
-                <button
-                  class="bg-black border-3 border-gray-300 px-4 py-2 rounded-md text-white"
-                >
+                <button class="bg-black border-3 border-gray-300 px-4 py-2 rounded-md text-white">
                   <a href="./events">Explore</a>
                 </button>
               </div>
@@ -181,25 +149,17 @@
       </div>
 
       <!-- card 3 -->
-      <div
-        class="elem3 m-10 my-20 flex flex-col w-full bg-white rounded shadow-lg sm:w-3/4 md:w-1/2 lg:w-3/6"
-      >
-        <div
-          class="w-full h-64 bg-top bg-cover rounded-t"
-          style="background-image: url('images/carvaan.png')"
-        ></div>
+      <div class="elem3 m-10 my-20 flex flex-col w-full bg-white rounded shadow-lg sm:w-3/4 md:w-1/2 lg:w-3/6">
+        <div class="w-full h-64 bg-top bg-cover rounded-t" style="background-image: url('images/carvaan.png')"></div>
         <div class="flex flex-col w-full md:flex-row">
           <div
-            class="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-gray-400 rounded md:flex-col md:items-center md:justify-center md:w-1/4"
-          >
+            class="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-gray-400 rounded md:flex-col md:items-center md:justify-center md:w-1/4">
             <div class="md:text-3xl">Mar</div>
             <div class="md:text-6xl">26</div>
             <div class="md:text-xl">10 am</div>
           </div>
           <div class="p-4 font-normal text-gray-800 md:w-3/4">
-            <h1
-              class="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-800"
-            >
+            <h1 class="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-800">
               Carvaan 2K25
             </h1>
             <p class="leading-normal">
@@ -212,9 +172,7 @@
             <div class="flex flex-row items-center mt-4 text-gray-700">
               <div class="w-1/2">Department</div>
               <div>
-                <button
-                  class="bg-black border-3 border-gray-300 px-4 py-2 rounded-md text-white"
-                >
+                <button class="bg-black border-3 border-gray-300 px-4 py-2 rounded-md text-white">
                   Explore
                 </button>
               </div>
@@ -228,54 +186,56 @@
 
     <div class="bg-gray-100">
       <div class="container mx-auto px-4 py-8">
-          <div class="relative overflow-hidden">
-              <!-- Carousel Wrapper -->
-              <div class="overflow-hidden w-full">
-                  <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
-                      <!-- Carousel Items (Duplicated for Infinite Loop) -->
-                      <div class="w-1/4 flex-shrink-0">
-                          <img src="images/download (1).jpeg" alt="Memory 1" class="w-full h-64">
-                      </div>
-                      <div class="w-1/4 flex-shrink-0">
-                          <img src="images/images.jpeg" alt="Memory 2" class="w-full h-64">
-                      </div>
-                      <div class="w-1/4 flex-shrink-0">
-                          <img src="images/dance.jpg" alt="Memory 3" class="w-full h-64">
-                      </div>
-                      <div class="w-1/4 flex-shrink-0">
-                          <img src="images/drama1.jpg" alt="Memory 4" class="w-full h-64">
-                      </div>
-                      <div class="w-1/4 flex-shrink-0">
-                          <img src="images/drama1.jpg" alt="Memory 5" class="w-full h-64">
-                      </div>
-                      
-                      
-                      <!-- Cloned items for infinite loop effect -->
-                      <div class="w-1/4 flex-shrink-0">
-                          <img src="images/download (1).jpeg" alt="Memory 1 Clone" class="w-full h-64">
-                      </div>
-                      <div class="w-1/4 flex-shrink-0">
-                          <img src="images/images.jpeg" alt="Memory 2 Clone" class="w-full h-64">
-                      </div>
-                      <div class="w-1/4 flex-shrink-0">
-                        <img src="images/images.jpeg" alt="Memory 2 Clone" class="w-full h-64">
-                      </div>
-                      <div class="w-1/4 flex-shrink-0">
-                        <img src="images/images.jpeg" alt="Memory 2 Clone" class="w-full h-64">
-                      </div>
-                  </div>
+        <div class="relative overflow-hidden">
+          <!-- Carousel Wrapper -->
+          <div class="overflow-hidden w-full">
+            <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+              <!-- Carousel Items (Duplicated for Infinite Loop) -->
+              <div class="w-1/4 flex-shrink-0">
+                <img src="images/download (1).jpeg" alt="Memory 1" class="w-full h-64">
               </div>
-  
-              <!-- Navigation Buttons -->
-              <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md hover:bg-opacity-75">
-                  &larr;
-              </button>
-              <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md hover:bg-opacity-75">
-                  &rarr;
-              </button>
+              <div class="w-1/4 flex-shrink-0">
+                <img src="images/images.jpeg" alt="Memory 2" class="w-full h-64">
+              </div>
+              <div class="w-1/4 flex-shrink-0">
+                <img src="images/dance.jpg" alt="Memory 3" class="w-full h-64">
+              </div>
+              <div class="w-1/4 flex-shrink-0">
+                <img src="images/drama1.jpg" alt="Memory 4" class="w-full h-64">
+              </div>
+              <div class="w-1/4 flex-shrink-0">
+                <img src="images/drama1.jpg" alt="Memory 5" class="w-full h-64">
+              </div>
+
+
+              <!-- Cloned items for infinite loop effect -->
+              <div class="w-1/4 flex-shrink-0">
+                <img src="images/download (1).jpeg" alt="Memory 1 Clone" class="w-full h-64">
+              </div>
+              <div class="w-1/4 flex-shrink-0">
+                <img src="images/images.jpeg" alt="Memory 2 Clone" class="w-full h-64">
+              </div>
+              <div class="w-1/4 flex-shrink-0">
+                <img src="images/images.jpeg" alt="Memory 2 Clone" class="w-full h-64">
+              </div>
+              <div class="w-1/4 flex-shrink-0">
+                <img src="images/images.jpeg" alt="Memory 2 Clone" class="w-full h-64">
+              </div>
+            </div>
           </div>
+
+          <!-- Navigation Buttons -->
+          <button id="prevBtn"
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md hover:bg-opacity-75">
+            &larr;
+          </button>
+          <button id="nextBtn"
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md hover:bg-opacity-75">
+            &rarr;
+          </button>
+        </div>
       </div>
-  </div>
+    </div>
     <!-- Map -->
 
     <section class="bg-gray-100">
@@ -285,27 +245,23 @@
             Visit Our Location
           </h2>
           <p class="mt-4 text-lg text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Government College of Engineering , Jalgaon.
           </p>
         </div>
         <div class="mt-16 lg:mt-20">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11672.945750644447!2d-122.42107853750231!3d37.7730507907087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858070cc2fbd55%3A0xa71491d736f62d5c!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1619524992238!5m2!1sen!2sus"
-                width="100%"
-                height="480"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14898.701128427485!2d75.53931505!3d21.0056497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd90fc9945a06b3%3A0x2adbed89161ccac2!2sGovernment%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1740150601032!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div>
               <div class="max-w-full mx-auto rounded-lg overflow-hidden">
                 <div class="px-6 py-4">
                   <h3 class="text-lg font-medium text-gray-900">Our Address</h3>
                   <p class="mt-1 text-gray-600">
-                    123 Main St, San Francisco, CA 94105
+                    National Highway No. 6
                   </p>
                 </div>
                 <div class="border-t border-gray-200 px-6 py-4">
@@ -316,7 +272,7 @@
                 </div>
                 <div class="border-t border-gray-200 px-6 py-4">
                   <h3 class="text-lg font-medium text-gray-900">Contact</h3>
-                  <p class="mt-1 text-gray-600">Email: info@example.com</p>
+                  <p class="mt-1 text-gray-600">Email: principal@gcoej.ac.in</p>
                   <p class="mt-1 text-gray-600">Phone: +1 23494 34993</p>
                 </div>
               </div>
@@ -326,173 +282,249 @@
       </div>
     </section>
 
+    <section>
+      <!-- Slider -->
+      <div data-hs-carousel='{
+  "loadingClasses": "opacity-0",
+  "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer",
+  "isCentered": true,
+  "slidesQty": {
+    "xs": 1,
+    "lg": 2
+  }
+}' class="relative">
+        <div class="hs-carousel w-full overflow-hidden bg-white rounded-lg">
+          <div class="relative min-h-72 -mx-1">
+            <div
+              class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+              <div class="hs-carousel-slide px-1">
+                <div class="flex justify-center h-full bg-gray-100 p-6">
+                  <span class="self-center text-sm text-gray-800 transition duration-700">First slide</span>
+                </div>
+              </div>
+              <div class="hs-carousel-slide px-1">
+                <div class="flex justify-center h-full bg-gray-200 p-6">
+                  <span class="self-center text-sm text-gray-800 transition duration-700">Second slide</span>
+                </div>
+              </div>
+              <div class="hs-carousel-slide px-1">
+                <div class="flex justify-center h-full bg-gray-300 p-6">
+                  <span class="self-center text-sm text-gray-800 transition duration-700">Third slide</span>
+                </div>
+              </div>
+              <div class="hs-carousel-slide px-1">
+                <div class="flex justify-center h-full bg-gray-100 p-6">
+                  <span class="self-center text-sm text-gray-800 transition duration-700">Fourth slide</span>
+                </div>
+              </div>
+              <div class="hs-carousel-slide px-1">
+                <div class="flex justify-center h-full bg-gray-200 p-6">
+                  <span class="self-center text-sm text-gray-800 transition duration-700">Fifth slide</span>
+                </div>
+              </div>
+              <div class="hs-carousel-slide px-1">
+                <div class="flex justify-center h-full bg-gray-300 p-6">
+                  <span class="self-center text-sm text-gray-800 transition duration-700">Sixth slide</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button"
+          class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-s-lg">
+          <span class="text-2xl" aria-hidden="true">
+            <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15 18-6-6 6-6"></path>
+            </svg>
+          </span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button type="button"
+          class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-e-lg">
+          <span class="sr-only">Next</span>
+          <span class="text-2xl" aria-hidden="true">
+            <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </span>
+        </button>
+
+        <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2"></div>
+      </div>
+      <!-- End Slider -->
+    </section>
+
     <%- include('./partials/footer')%>
-  </body>
+</body>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-  <script>
-    window.addEventListener("load", () => {
-      var tl = gsap.timeline();
+<script>
+  window.addEventListener("load", () => {
+    var tl = gsap.timeline();
 
-      gsap.from(".hero-text p", {
-        x: -200,
-        opacity: 0,
-        duration: 1.5,
-        ease: "circ.out",
-      });
+    gsap.from(".hero-text p", {
+      x: -200,
+      opacity: 0,
+      duration: 1.5,
+      ease: "circ.out",
+    });
 
-      gsap.from(".hero-text a", {
-        x: 200,
-        opacity: 0,
-        duration: 1.5,
-        ease: "circ.out",
-      });
+    gsap.from(".hero-text a", {
+      x: 200,
+      opacity: 0,
+      duration: 1.5,
+      ease: "circ.out",
+    });
 
-      document
-        .querySelector(".hero-text a")
-        .addEventListener("mouseenter", () => {
-          gsap.to(".hero-text a", {
-            border: "2px solid black",
-            backgroundImage: "linear-gradient(45deg, magenta, cyan, blue)",
-            backgroundSize: "200% 200%",
-            borderColor: "transparent",
-            scale: 1.1,
-            ease: "circ.out",
-          });
+    document
+      .querySelector(".hero-text a")
+      .addEventListener("mouseenter", () => {
+        gsap.to(".hero-text a", {
+          border: "2px solid black",
+          backgroundImage: "linear-gradient(45deg, magenta, cyan, blue)",
+          backgroundSize: "200% 200%",
+          borderColor: "transparent",
+          scale: 1.1,
+          ease: "circ.out",
         });
+      });
 
-      document
-        .querySelector(".hero-text a")
-        .addEventListener("mouseleave", () => {
-          gsap.to(".hero-text a", {
-            border: 0,
-            background: "#73C7C7",
-            borderColor: "white",
-            color: "black",
-            scale: 1,
-            ease: "power2.out",
-          });
+    document
+      .querySelector(".hero-text a")
+      .addEventListener("mouseleave", () => {
+        gsap.to(".hero-text a", {
+          border: 0,
+          background: "#73C7C7",
+          borderColor: "white",
+          color: "black",
+          scale: 1,
+          ease: "power2.out",
         });
-
-      tl.from(".section2 .elem1", {
-        x: -400,
-        duration: 2,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: ".section2 .elem1",
-          scroller: "body",
-          start: "top 90%",
-          end: "top 20%",
-          scrub: 2,
-        },
       });
 
-      tl.from(".section2 .elem2", {
-        x: 400,
-        duration: 2,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: ".section2 .elem2",
-          scroller: "body",
-          start: "top 90%",
-          end: "top 20%",
-          scrub: 2,
-        },
-      });
+    tl.from(".section2 .elem1", {
+      x: -400,
+      duration: 2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".section2 .elem1",
+        scroller: "body",
+        start: "top 90%",
+        end: "top 20%",
+        scrub: 2,
+      },
+    });
 
-      tl.from(".section2 .elem3", {
-        x: -400,
-        duration: 2,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: ".section2 .elem3",
-          scroller: "body",
-          start: "top 90%",
-          end: "top 20%",
-          scrub: 2,
-        },
-      });
+    tl.from(".section2 .elem2", {
+      x: 400,
+      duration: 2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".section2 .elem2",
+        scroller: "body",
+        start: "top 90%",
+        end: "top 20%",
+        scrub: 2,
+      },
+    });
 
-      document.querySelectorAll(".section2 button").forEach((button) => {
-        button.addEventListener("mouseenter", () => {
-          gsap.to(button, {
-            border: "1px solid black",
-            backgroundImage: "linear-gradient(45deg, magenta, cyan, blue)",
-            backgroundSize: "200% 200%",
-            borderColor: "transparent",
-            scale: 1.1,
-            ease: "power2.out",
-          });
+    tl.from(".section2 .elem3", {
+      x: -400,
+      duration: 2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".section2 .elem3",
+        scroller: "body",
+        start: "top 90%",
+        end: "top 20%",
+        scrub: 2,
+      },
+    });
+
+    document.querySelectorAll(".section2 button").forEach((button) => {
+      button.addEventListener("mouseenter", () => {
+        gsap.to(button, {
+          border: "1px solid black",
+          backgroundImage: "linear-gradient(45deg, magenta, cyan, blue)",
+          backgroundSize: "200% 200%",
+          borderColor: "transparent",
+          scale: 1.1,
+          ease: "power2.out",
         });
+      });
 
-        button.addEventListener("mouseleave", () => {
-          gsap.to(button, {
-            border: 0,
-            background: "black",
-            borderColor: "white",
-            scale: 1,
-            ease: "power2.out",
-          });
+      button.addEventListener("mouseleave", () => {
+        gsap.to(button, {
+          border: 0,
+          background: "black",
+          borderColor: "white",
+          scale: 1,
+          ease: "power2.out",
         });
       });
     });
+  });
 
-    //Carousel
+  //Carousel
 
-    
-    const carousel = document.getElementById('carousel');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const items = document.querySelectorAll('#carousel > div');
-    const totalItems = items.length;
-    let currentIndex = 0;
-    const visibleItems = 3; // Number of visible images
-    
-    function updateCarousel() {
-        const offset = -currentIndex * (100 / visibleItems);
+
+  const carousel = document.getElementById('carousel');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const items = document.querySelectorAll('#carousel > div');
+  const totalItems = items.length;
+  let currentIndex = 0;
+  const visibleItems = 3; // Number of visible images
+
+  function updateCarousel() {
+    const offset = -currentIndex * (100 / visibleItems);
+    carousel.style.transition = 'transform 0.7s ease-in-out';
+    carousel.style.transform = `translateX(${offset}%)`;
+  }
+
+  function nextSlide() {
+    if (currentIndex >= totalItems - visibleItems) {
+      currentIndex = 0;
+      carousel.style.transition = 'none'; // Remove transition for seamless loop
+      carousel.style.transform = `translateX(0%)`;
+      setTimeout(() => {
         carousel.style.transition = 'transform 0.7s ease-in-out';
-        carousel.style.transform = `translateX(${offset}%)`;
+        currentIndex++;
+        updateCarousel();
+      }, 50);
+    } else {
+      currentIndex++;
+      updateCarousel();
     }
+  }
 
-    function nextSlide() {
-        if (currentIndex >= totalItems - visibleItems) {
-            currentIndex = 0;
-            carousel.style.transition = 'none'; // Remove transition for seamless loop
-            carousel.style.transform = `translateX(0%)`;
-            setTimeout(() => {
-                carousel.style.transition = 'transform 0.7s ease-in-out';
-                currentIndex++;
-                updateCarousel();
-            }, 50);
-        } else {
-            currentIndex++;
-            updateCarousel();
-        }
+  function prevSlide() {
+    if (currentIndex <= 0) {
+      currentIndex = totalItems - visibleItems;
+      carousel.style.transition = 'none';
+      carousel.style.transform = `translateX(-${currentIndex * (100 / visibleItems)}%)`;
+      setTimeout(() => {
+        carousel.style.transition = 'transform 0.7s ease-in-out';
+        currentIndex--;
+        updateCarousel();
+      }, 50);
+    } else {
+      currentIndex--;
+      updateCarousel();
     }
+  }
 
-    function prevSlide() {
-        if (currentIndex <= 0) {
-            currentIndex = totalItems - visibleItems;
-            carousel.style.transition = 'none';
-            carousel.style.transform = `translateX(-${currentIndex * (100 / visibleItems)}%)`;
-            setTimeout(() => {
-                carousel.style.transition = 'transform 0.7s ease-in-out';
-                currentIndex--;
-                updateCarousel();
-            }, 50);
-        } else {
-            currentIndex--;
-            updateCarousel();
-        }
-    }
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
 
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
+  // Automatic sliding with seamless loop
+  setInterval(nextSlide, 3000); // Slide every 3 seconds
 
-    // Automatic sliding with seamless loop
-    setInterval(nextSlide, 3000); // Slide every 3 seconds
+</script>
 
-  </script>
 </html>
