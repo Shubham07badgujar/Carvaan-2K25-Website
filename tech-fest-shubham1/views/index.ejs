@@ -186,58 +186,6 @@
 
     <!-- ============== Carousel ================ -->
 
-    <div class="bg-gray-100">
-      <div class="container mx-auto px-4 py-8">
-        <div class="relative overflow-hidden">
-          <!-- Carousel Wrapper -->
-          <div class="overflow-hidden w-full">
-            <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
-              <!-- Carousel Items (Duplicated for Infinite Loop) -->
-              <div class="w-1/4 flex-shrink-0">
-                <img src="images/download (1).jpeg" alt="Memory 1" class="w-full h-64">
-              </div>
-              <div class="w-1/4 flex-shrink-0">
-                <img src="images/images.jpeg" alt="Memory 2" class="w-full h-64">
-              </div>
-              <div class="w-1/4 flex-shrink-0">
-                <img src="images/dance.jpg" alt="Memory 3" class="w-full h-64">
-              </div>
-              <div class="w-1/4 flex-shrink-0">
-                <img src="images/drama1.jpg" alt="Memory 4" class="w-full h-64">
-              </div>
-              <div class="w-1/4 flex-shrink-0">
-                <img src="images/drama1.jpg" alt="Memory 5" class="w-full h-64">
-              </div>
-
-
-              <!-- Cloned items for infinite loop effect -->
-              <div class="w-1/4 flex-shrink-0">
-                <img src="images/download (1).jpeg" alt="Memory 1 Clone" class="w-full h-64">
-              </div>
-              <div class="w-1/4 flex-shrink-0">
-                <img src="images/images.jpeg" alt="Memory 2 Clone" class="w-full h-64">
-              </div>
-              <div class="w-1/4 flex-shrink-0">
-                <img src="images/images.jpeg" alt="Memory 2 Clone" class="w-full h-64">
-              </div>
-              <div class="w-1/4 flex-shrink-0">
-                <img src="images/images.jpeg" alt="Memory 2 Clone" class="w-full h-64">
-              </div>
-            </div>
-          </div>
-
-          <!-- Navigation Buttons -->
-          <button id="prevBtn"
-            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md hover:bg-opacity-75">
-            &larr;
-          </button>
-          <button id="nextBtn"
-            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md hover:bg-opacity-75">
-            &rarr;
-          </button>
-        </div>
-      </div>
-    </div>
     <!-- Map -->
 
     <div id="map">
@@ -318,76 +266,77 @@
 
     <section>
       <!-- Slider -->
-      <div data-hs-carousel='{
-  "loadingClasses": "opacity-0",
-  "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer",
-  "isCentered": true,
-  "slidesQty": {
-    "xs": 1,
-    "lg": 2
-  }
-}' class="relative">
+      <div data-hs-carousel='{  
+        "loadingClasses": "opacity-0",  
+        "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer",  
+        "isCentered": true,  
+        "slidesQty": { "xs": 1, "lg": 2 }  
+      }' class="relative">
         <div class="hs-carousel w-full overflow-hidden bg-white rounded-lg">
           <div class="relative min-h-72 -mx-1">
-            <div
-              class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+            <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+              
               <div class="hs-carousel-slide px-1">
                 <div class="flex justify-center h-full bg-gray-100 p-6">
-                  <span class="self-center text-sm text-gray-800 transition duration-700">First slide</span>
+                  <img src="images/images.jpeg" alt="First slide" class="w-full h-auto rounded-lg">
                 </div>
               </div>
+              
               <div class="hs-carousel-slide px-1">
                 <div class="flex justify-center h-full bg-gray-200 p-6">
-                  <span class="self-center text-sm text-gray-800 transition duration-700">Second slide</span>
+                  <img src="images/building.jpg.jpg" alt="Second slide" class="w-full h-auto rounded-lg">
                 </div>
               </div>
+              
               <div class="hs-carousel-slide px-1">
                 <div class="flex justify-center h-full bg-gray-300 p-6">
-                  <span class="self-center text-sm text-gray-800 transition duration-700">Third slide</span>
+                  <img src="images/building_2.jpg" alt="Third slide" class="w-full h-auto rounded-lg">
                 </div>
               </div>
+              
               <div class="hs-carousel-slide px-1">
                 <div class="flex justify-center h-full bg-gray-100 p-6">
-                  <span class="self-center text-sm text-gray-800 transition duration-700">Fourth slide</span>
+                  <img src="images/kat.png" alt="Fourth slide" class="w-full h-auto rounded-lg">
                 </div>
               </div>
+              
               <div class="hs-carousel-slide px-1">
                 <div class="flex justify-center h-full bg-gray-200 p-6">
-                  <span class="self-center text-sm text-gray-800 transition duration-700">Fifth slide</span>
+                  <img src="images/techHero.png" alt="Fifth slide" class="w-full h-auto rounded-lg">
                 </div>
               </div>
+              
               <div class="hs-carousel-slide px-1">
                 <div class="flex justify-center h-full bg-gray-300 p-6">
-                  <span class="self-center text-sm text-gray-800 transition duration-700">Sixth slide</span>
+                  <img src="images/images.jpeg" alt="Sixth slide" class="w-full h-auto rounded-lg">
                 </div>
               </div>
+      
             </div>
           </div>
         </div>
-
-        <button type="button"
-          class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-s-lg">
+      
+        <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-s-lg">
           <span class="text-2xl" aria-hidden="true">
-            <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m15 18-6-6 6-6"></path>
             </svg>
           </span>
           <span class="sr-only">Previous</span>
         </button>
-        <button type="button"
-          class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-e-lg">
+        
+        <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/10 rounded-e-lg">
           <span class="sr-only">Next</span>
           <span class="text-2xl" aria-hidden="true">
-            <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m9 18 6-6-6-6"></path>
             </svg>
           </span>
         </button>
-
+      
         <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2"></div>
       </div>
+      
       <!-- End Slider -->
     </section>
 
