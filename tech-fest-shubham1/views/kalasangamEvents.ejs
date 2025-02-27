@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalasangam 2k25 Events</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      font-family: "Roboto Condensed", serif;
+    }
+  </style>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kalasangam 2k25 Events</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-</head>
-<style>
-  body {
-    font-family: "Roboto Condensed", serif;
-  }
-</style>
-
-<body>
-  <%- include('partials/header') %>
+  <body>
+    <%- include('partials/kala_navbar') %>
 
     <div class="w-full px-6 md:px-12 lg:px-20 mt-6">
       <div
-        class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-orange-300 to-orange-300 rounded-xl shadow-lg p-6 md:p-10">
+        class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-orange-300 to-orange-300 rounded-xl shadow-lg p-6 md:p-10"
+      >
         <!-- Left Section: Event Name & Description -->
         <div class="md:w-1/2 text-left">
           <h2 class="text-3xl md:text-4xl font-bold text-purple-800">
@@ -41,7 +42,11 @@
 
         <!-- Right Section: Event Image -->
         <div class="md:w-1/2 flex justify-center mt-6 md:mt-0">
-          <img src="/images/kalasangamLogo.png" alt="Cultural Fest 2025" class="w-full max-w-sm rounded-lg shadow-sm" />
+          <img
+            src="/images/kalasangamLogo.png"
+            alt="Cultural Fest 2025"
+            class="w-full max-w-sm rounded-lg shadow-sm"
+          />
         </div>
       </div>
     </div>
@@ -49,33 +54,215 @@
     <!-- =====================Cards===================== -->
 
     <div class="container mx-auto p-5">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center"
+      >
         <!-- Literary Card -->
         <div
-          class="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-80 mx-auto flex flex-col">
-          <img src="images/literary.png" class="w-full h-48 object-cover" alt="Literary" />
-          <div class="p-4 flex flex-col flex-grow" style="
+          class="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-80 mx-auto flex flex-col"
+        >
+          <img
+            src="images/literary.png"
+            class="w-full h-48 object-cover"
+            alt="Literary"
+          />
+          <div
+            class="p-4 flex flex-col flex-grow"
+            style="
               background-image: url('images/literary-bg.png');
               background-size: cover;
               background-position: center;
               background-color: rgba(255, 255, 255, 0.8);
               background-blend-mode: overlay;
-            ">
+            "
+          >
             <h5 class="text-xl font-semibold text-center">Literary</h5>
             <p class="text-gray-600 text-sm mt-2 flex-grow">
               "Immerse yourself in the world of words with our Literary events.
               Showcase your creativity and eloquence in engaging sub-events"
             </p>
             <div class="mt-3 flex justify-between">
-              <a href="#" class="px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 no-underline">Register</a>
-              <a href="/event-details/literary" class="px-4 py-2 text-red border border-red-600 rounded hover:bg-orange-700 no-underline">View
-                Details</a>
+              <a
+                href="https://forms.gle/3HxrHywzpBsGh3fW9"
+                class="px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 no-underline"
+                >Register</a
+              >
+              <a
+                href="/event-details/literary"
+                class="px-4 py-2 text-red border border-red-600 rounded hover:bg-orange-700 no-underline"
+                >View Details</a
+              >
             </div>
           </div>
         </div>
 
-        <!-- Writing Card -->
+  
+        <!-- Music Card -->
         <div
+          class="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-80 mx-auto flex flex-col"
+        >
+          <img
+            src="images/music.png"
+            class="w-full h-48 object-cover"
+            alt="Music"
+          />
+          <div
+            class="p-4 flex flex-col flex-grow"
+            style="
+              background-image: url('images/music-bg.png');
+              background-size: cover;
+              background-position: center;
+              background-color: rgba(255, 255, 255, 0.8);
+              background-blend-mode: overlay;
+            "
+          >
+            <h5 class="text-xl font-semibold text-center">Music</h5>
+            <p class="text-gray-600 text-sm mt-2 flex-grow">
+              "Let the rhythm take over and showcase your musical talent in our
+              exciting Music events. Whether you sing or play an instrument,
+              this is your stage to shine. Participate in thrilling sub-events"
+            </p>
+            <div class="mt-3 flex justify-between">
+              <a
+                href="https://forms.gle/YsKPni6TnD3PdhYDA"
+                class="px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 no-underline"
+                >Register</a
+              >
+              <a
+                href="/event-details/music"
+                class="px-4 py-2 text-red border border-red-600 rounded hover:bg-orange-700 no-underline"
+                >View Details</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Dance Card -->
+        <div
+          class="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-80 mx-auto flex flex-col"
+        >
+          <img
+            src="images/dance-bg.png"
+            class="w-full h-48 object-cover"
+            alt="Dance"
+          />
+          <div
+            class="p-4 flex flex-col flex-grow"
+            style="
+              background-image: url('images/Dance.png');
+              background-size: cover;
+              background-position: center;
+              background-color: rgba(255, 255, 255, 0.8);
+              background-blend-mode: overlay;
+            "
+          >
+            <h5 class="text-xl font-semibold text-center">Dance</h5>
+            <p class="text-gray-600 text-sm mt-2 flex-grow">
+              "Express yourself through movement and rhythm! Whether it's
+              classical elegance or high-energy beats, set the stage on fire
+              with your passion for dance. Let your moves speak louder than
+              words and mesmerize the audience with your performance!" 💃🔥
+            </p>
+            <div class="mt-3 flex justify-between">
+              <a
+                href="https://forms.gle/YWEjBv9FdPG17c9NA"
+                class="px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 no-underline"
+                >Register</a
+              >
+              <a
+                href="/event-details/dance"
+                class="px-4 py-2 text-red border border-red-600 rounded hover:bg-orange-700 no-underline"
+                >View Details</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Theatre Card -->
+        <div
+          class="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-80 mx-auto flex flex-col"
+        >
+          <img
+            src="images/Threatre.png"
+            class="w-full h-48 object-cover"
+            alt="Theatre"
+          />
+          <div
+            class="p-4 flex flex-col flex-grow"
+            style="
+              background-image: url('images/theatre-bg.png');
+              background-size: cover;
+              background-position: center;
+              background-color: rgba(255, 255, 255, 0.8);
+              background-blend-mode: overlay;
+            "
+          >
+            <h5 class="text-xl font-semibold text-center">Theatre</h5>
+            <p class="text-gray-600 text-sm mt-2 flex-grow">
+              "Step into the spotlight and bring stories to life! Theater is
+              where emotions meet expression, and every performance leaves a
+              lasting impact. Whether it's drama, comedy, or intense
+              storytelling, showcase your acting prowess and captivate the
+              audience with your stage presence!" 🎭✨
+            </p>
+            <div class="mt-3 flex justify-between">
+              <a
+                href="https://forms.gle/BdgdJ1FDkiXA3wbB9"
+                class="px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 no-underline"
+                >Register</a
+              >
+              <a
+                href="/event-details/theater"
+                class="px-4 py-2 text-red border border-red-600 rounded hover:bg-orange-700 no-underline"
+                >View Details</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Fine Arts Card -->
+        <div
+          class="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-80 mx-auto flex flex-col"
+        >
+          <img
+            src="images/FineArts1.png"
+            class="w-full h-48 object-cover"
+            alt="Fine Arts"
+          />
+          <div
+            class="p-4 flex flex-col flex-grow"
+            style="
+              background-image: url('images/FineArts1.png');
+              background-size: cover;
+              background-position: center;
+              background-color: rgba(255, 255, 255, 0.8);
+              background-blend-mode: overlay;
+            "
+          >
+            <h5 class="text-xl font-semibold text-center">Fine Arts</h5>
+            <p class="text-gray-600 text-sm mt-2 flex-grow">
+              "Unleash your artistic imagination and transform ideas into
+              stunning visuals! Whether it's colors, patterns, or brush strokes,
+              let your creativity shine in our exciting Fine Arts sub-events:"
+            </p>
+            <div class="mt-3 flex justify-between">
+              <a
+                href="https://forms.gle/GmhyzmQLhura2B588"
+                class="px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 no-underline"
+                >Register</a
+              >
+              <a
+                href="/event-details/finearts"
+                class="px-4 py-2 text-red border border-red-600 rounded hover:bg-orange-700 no-underline"
+                >View Details</a
+              >
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Writing Card -->
+        <!-- <div
           class="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-80 mx-auto flex flex-col">
           <img src="images/writing.png" class="w-full h-48 object-cover" alt="Writing" />
           <div class="p-4 flex flex-col flex-grow" style="
@@ -92,129 +279,8 @@
               content, this event is your platform to express and inspire."
             </p>
             <div class="mt-3 flex justify-between">
-              <a href="#" class="px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 no-underline">Register</a>
+              <a href="https://forms.gle/wuCsoziJjrugjyiCA" class="px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 no-underline">Register</a>
               <a href="/event-details/writing" class="px-4 py-2 text-red border border-red-600 rounded hover:bg-orange-700 no-underline">View
-                Details</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Music Card -->
-        <div
-          class="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-80 mx-auto flex flex-col">
-          <img src="images/music.png" class="w-full h-48 object-cover" alt="Music" />
-          <div class="p-4 flex flex-col flex-grow" style="
-              background-image: url('images/music-bg.png');
-              background-size: cover;
-              background-position: center;
-              background-color: rgba(255, 255, 255, 0.8);
-              background-blend-mode: overlay;
-            ">
-            <h5 class="text-xl font-semibold text-center">Music</h5>
-            <p class="text-gray-600 text-sm mt-2 flex-grow">
-              "Let the rhythm take over and showcase your musical talent in our
-              exciting Music events. Whether you sing or play an instrument,
-              this is your stage to shine. Participate in thrilling sub-events"
-            </p>
-            <div class="mt-3 flex justify-between">
-              <a href="#" class="px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 no-underline">Register</a>
-              <a href="/event-details/music" class="px-4 py-2 text-red border border-red-600 rounded hover:bg-orange-700 no-underline">View
-                Details</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Dance Card -->
-        <div
-          class="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-80 mx-auto flex flex-col">
-          <img src="images/dance-bg.png" class="w-full h-48 object-cover" alt="Dance" />
-          <div class="p-4 flex flex-col flex-grow" style="
-            background-image: url('images/Dance.png');
-            background-size: cover;
-            background-position: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            background-blend-mode: overlay;
-          ">
-            <h5 class="text-xl font-semibold text-center">Dance</h5>
-            <p class="text-gray-600 text-sm mt-2 flex-grow">
-              "Express yourself through movement and rhythm! Whether it's
-              classical elegance or high-energy beats, set the stage on fire
-              with your passion for dance. Let your moves speak louder than
-              words and mesmerize the audience with your performance!" 💃🔥
-            </p>
-            <div class="mt-3 flex justify-between">
-              <a href="#" class="px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 no-underline">Register</a>
-              <a href="/event-details/dance" class="px-4 py-2 text-red border border-red-600 rounded hover:bg-orange-700 no-underline">View
-                Details</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Theatre Card -->
-        <div
-          class="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-80 mx-auto flex flex-col">
-          <img src="images/Threatre.png" class="w-full h-48 object-cover" alt="Theatre" />
-          <div class="p-4 flex flex-col flex-grow" style="
-            background-image: url('images/theatre-bg.png');
-            background-size: cover;
-            background-position: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            background-blend-mode: overlay;
-          ">
-            <h5 class="text-xl font-semibold text-center">Theatre</h5>
-            <p class="text-gray-600 text-sm mt-2 flex-grow">
-              "Step into the spotlight and bring stories to life! Theater is
-              where emotions meet expression, and every performance leaves a
-              lasting impact. Whether it's drama, comedy, or intense
-              storytelling, showcase your acting prowess and captivate the
-              audience with your stage presence!" 🎭✨
-            </p>
-            <div class="mt-3 flex justify-between">
-              <a href="#" class="px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 no-underline">Register</a>
-              <a href="/event-details/theater" class="px-4 py-2 text-red border border-red-600 rounded hover:bg-orange-700 no-underline">View
-                Details</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Fine Arts Card -->
-        <div
-          class="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-80 mx-auto flex flex-col">
-          <img src="images/FineArts1.png" class="w-full h-48 object-cover" alt="Fine Arts" />
-          <div class="p-4 flex flex-col flex-grow" style="
-            background-image: url('images/FineArts1.png');
-            background-size: cover;
-            background-position: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            background-blend-mode: overlay;
-          ">
-
-            <h5 class="text-xl font-semibold text-center">Fine Arts</h5>
-            <p class="text-gray-600 text-sm mt-2 flex-grow">
-              "Unleash your artistic imagination and transform ideas into
-              stunning visuals! Whether it's colors, patterns, or brush strokes,
-              let your creativity shine in our exciting Fine Arts sub-events:"
-            </p>
-            <div class="mt-3 flex justify-between">
-              <a href="#" class="px-4 py-2 bg-orange-600 text-white rounded hover:bg-red-700 no-underline">Register</a>
-              <a href="/event-details/finearts" class="px-4 py-2 text-red border border-red-600 rounded hover:bg-orange-700 no-underline">View
-                Details</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Photography Card -->
-        <!-- <div
-          class="card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl w-80 mx-auto flex flex-col">
-          <img src="images/photography.png" class="w-full h-48 object-cover" alt="Photography" />
-          <div class="p-4 flex flex-col flex-grow">
-            <h5 class="text-xl font-semibold text-center">Photography</h5>
-            <p class="text-gray-600 text-sm mt-2 flex-grow">
-              Capture the best moments through your lens.
-            </p>
-            <div class="mt-3 flex justify-between">
-              <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 no-underline">Register</a>
-              <a href="#" class="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 no-underline">View
                 Details</a>
             </div>
           </div>
@@ -222,17 +288,13 @@
 
         <!-- More Cards (Repeat for 4 more categories) -->
       </div>
-
-
-
-
     </div>
     <%- include('partials/kala_footer') %>
 
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

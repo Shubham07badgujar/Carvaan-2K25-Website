@@ -19,7 +19,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
+        h1, h2 {
             text-align: center;
             color: #343a40;
         }
@@ -39,16 +39,39 @@
             text-align: center;
             padding: 10px;
             margin-top: 20px;
-            background:  orange;
+            background: orange;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+        }
+        .fees-section {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .fees-section h3 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .fees-section p {
+            margin: 10px 0 0;
+            font-size: 18px;
+        }
+        .fees-section .amount {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffdd57;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🎭 रंगमंचीय कलाप्रकार - स्टैंडअप कॉमेडी 🎤</h1>
+        <h1>🎭 Stage Art Form - Standup Comedy / रंगमंचीय कलाप्रकार - स्टैंडअप कॉमेडी 🎤</h1>
         <ul>
             <li>📌 प्रत्येक महाविद्यालयाचा ०१ (एक) स्पर्धक या कलाप्रकारात सहभागी होऊ शकेल. / One (1) competitor from each college can participate in this art form.</li>
             <li>⏳ प्रत्येक सहभागीला किमान ५ ते कमाल ७ मिनिटांचा वेळ दिलेला असेल. / Each participant will be given a minimum of 5 to a maximum of 7 minutes.</li>
@@ -58,7 +81,15 @@
             <li>🚫 गैरसोयीचे, अपमानकारक किंवा वादग्रस्त विधाने करण्यास परवानगी नाही. / Making inconvenient, offensive, or controversial statements is not allowed.</li>
             <li>✅ सादरीकरणात शिस्त आणि व्यावसायिकता अपेक्षित आहे. / Discipline and professionalism are expected in the presentation.</li>
         </ul>
-        <a href="#" class="register-btn">Register</a>
+
+        <!-- Registration Fees Section -->
+        <div class="fees-section">
+            <h3>नोंदणी शुल्क (Registration Fees)</h3>
+            <p>प्रत्येक स्पर्धेसाठी (For each event):</p>
+            <p class="amount">₹ 200</p>
+        </div>
+
+        <a href="https://forms.gle/BdgdJ1FDkiXA3wbB9" class="register-btn">Register</a>
     </div>
 </body>
 </html>
