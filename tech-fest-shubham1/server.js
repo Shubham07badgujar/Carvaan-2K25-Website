@@ -56,6 +56,10 @@ app.get('/event-details/finearts', (req, res) => {
   res.render('event-details/finearts');
 });
 
+app.get('/tech-event-details/guideLineX', (req, res) => {
+  res.render('tech-event-details/guideLineX');
+});
+
 
 
 // ✅ Serve `header.html` correctly
