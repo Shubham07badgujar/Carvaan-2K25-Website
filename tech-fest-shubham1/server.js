@@ -60,6 +60,34 @@ app.get('/tech-event-details/guideLineX', (req, res) => {
   res.render('tech-event-details/guideLineX');
 });
 
+app.get('/tech-event-details/aeroQuest', (req, res) => {
+  res.render('tech-event-details/aeroQuest');
+});
+
+app.get('/tech-event-details/civil', (req, res) => {
+  res.render('tech-event-details/civil');
+});
+
+app.get('/tech-event-details/mech', (req, res) => {
+  res.render('tech-event-details/mech');
+});
+
+app.get('/tech-event-details/sensoCraft', (req, res) => {
+  res.render('tech-event-details/sensoCraft');
+});
+
+app.get('/tech-event-details/shutterBugs', (req, res) => {
+  res.render('tech-event-details/shutterBugs');
+});
+
+app.get('/tech-event-details/electrical', (req, res) => {
+  res.render('tech-event-details/electrical');
+});
+
+app.get('/tech-event-details/dronathon', (req, res) => {
+  res.render('tech-event-details/dronathon');
+});
+
 
 
 // ✅ Serve `header.html` correctly
