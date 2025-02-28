@@ -88,6 +88,19 @@ app.get('/tech-event-details/dronathon', (req, res) => {
   res.render('tech-event-details/dronathon');
 });
 
+app.get('/tech-event-details/codeSphere', (req, res) => {
+  res.render('tech-event-details/codeSphere');
+});
+
+app.get('/tech-event-details/roboSoccer', (req, res) => {
+  res.render('tech-event-details/roboSoccer');
+});
+
+app.get('/tech-event-details/autoCad', (req, res) => {
+  res.render('tech-event-details/autoCad');
+});
+
+
 
 
 // ✅ Serve `header.html` correctly
