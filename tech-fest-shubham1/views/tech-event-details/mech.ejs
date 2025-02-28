@@ -62,6 +62,53 @@
   .btn:hover {
       background-color: #52d1b2;
   }
+
+  .container {
+      max-width: calc(100% - 400px); /* 200px margin on both sides */
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #112240;
+      border: 2px solid #64ffda; /* Border color matching the theme */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .buttons {
+      display: flex;
+      justify-content: center; /* Horizontally center the buttons */
+      gap: 20px; /* Adds space between the buttons */
+  }
+
+  @media (max-width: 1200px) {
+      .container {
+          max-width: calc(100% - 200px); /* Reduce margin for smaller screens */
+      }
+  }
+
+  @media (max-width: 768px) {
+      .container {
+          max-width: calc(100% - 100px); /* Further reduce margin for tablets */
+      }
+
+      h1 {
+          font-size: 2rem; /* Adjust heading size for smaller screens */
+      }
+  }
+
+  @media (max-width: 480px) {
+      .container {
+          max-width: calc(100% - 40px); /* Minimal margin for mobile devices */
+          padding: 15px;
+      }
+
+      h1 {
+          font-size: 1.8rem; /* Further adjust heading size for mobile */
+      }
+
+      p {
+          font-size: 1rem; /* Adjust paragraph font size for mobile */
+      }
+  }
 </style>
 <body>
   <div class="container">
@@ -75,26 +122,26 @@
         <p><strong>💰 Entry Fee:</strong> ₹3000 for Showrooms | ₹200 for Individuals</p>
         
         <h3>About the Event</h3>
-        <p>Get ready to witness the ultimate celebration of **automotive innovation** at AUTO EXPO 2025!  
-           This one-day event will bring together **car enthusiasts, industry experts, and leading automobile brands**.  
-           From futuristic **electric vehicles** to **classic car showcases** and **cutting-edge automotive technologies**,  
-           the Auto Expo promises an **adrenaline-filled experience** for everyone.</p>
+        <p>Get ready to witness the ultimate celebration of automotive innovation at AUTO EXPO 2025!  
+           This one-day event will bring together car enthusiasts, industry experts, and leading automobile brands.  
+           From futuristic electric vehicles to classic car showcases and cutting-edge automotive technologies,  
+           the Auto Expo promises an **adrenaline-filled experience for everyone.</p>
 
         <h3>Event Highlights</h3>
         <ul>
-            <li>🚗 **Automobile Showcase:** Latest cars, bikes, EVs, and concept vehicles.</li>
-            <li>🏁 **Live Demo Drives:** Experience the thrill of top models and eco-friendly rides.</li>
-            <li>🛠 **Discussion With Technical Executives:** Get insights about vehicle specifications and technology.</li>
-            <li>🎭 **Entertainment:** Individual riders will showcase their driving skills.</li>
-            <li>🏆 **Contests & Awards:** Participate in quiz contests and win prizes.</li>
+            <li>🚗 Automobile Showcase: Latest cars, bikes, EVs, and concept vehicles.</li>
+            <li>🏁 Live Demo Drives: Experience the thrill of top models and eco-friendly rides.</li>
+            <li>🛠 Discussion With Technical Executives: Get insights about vehicle specifications and technology.</li>
+            <li>🎭 Entertainment: Individual riders will showcase their driving skills.</li>
+            <li>🏆 Contests & Awards: Participate in quiz contests and win prizes.</li>
         </ul>
 
         <h3>Who Can Attend?</h3>
         <ul>
-            <li>🚘 **Automobile Enthusiasts**</li>
-            <li>🎓 **Engineering Students & Professionals**</li>
-            <li>🏢 **Local Dealers & Industry Experts**</li>
-            <li>🚀 **General Public with a Passion for Cars & Technology**</li>
+            <li>🚘 Automobile Enthusiasts</li>
+            <li>🎓 Engineering Students & Professionals</li>
+            <li>🏢 Local Dealers & Industry Experts</li>
+            <li>🚀 General Public with a Passion for Cars & Technology</li>
         </ul>
 
         <h3>Registration Details</h3>
@@ -103,10 +150,10 @@
         <div class="contact">
             <h3>For More Information</h3>
             <p><strong>📞 Contact:</strong></p>
-            <p>📌 President - **Vikrant Gopal Konile** (+91 76667 96016)</p>
-            <p>📌 Coordinator - **Suresh Vijay Khadtare** (+91 91466 21991)</p>
-            <p>📌 Co-coordinator - **Rajashree Jeevan Kurhade** (+91 84830 19590)</p>
-            <p>📌 Co-coordinator - **Shreyash Sunil Hadke** (+91 77987 47978)</p>
+            <p>📌 President - Vikrant Gopal Konile (+91 76667 96016)</p>
+            <p>📌 Coordinator - Suresh Vijay Khadtare (+91 91466 21991)</p>
+            <p>📌 Co-coordinator - Rajashree Jeevan Kurhade (+91 84830 19590)</p>
+            <p>📌 Co-coordinator - Shreyash Sunil Hadke (+91 77987 47978)</p>
         </div>
 
         <div class="buttons">

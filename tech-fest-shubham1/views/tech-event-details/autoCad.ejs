@@ -21,11 +21,12 @@
       padding: 20px;
   }
 
-  .details-container {
-      max-width: 800px;
+  .container {
+      max-width: calc(100% - 400px); /* 200px margin on both sides */
       margin: 0 auto;
       padding: 20px;
       background-color: #112240;
+      border: 2px solid #64ffda; /* Border color matching the theme */
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -62,6 +63,44 @@
   .btn:hover {
       background-color: #52d1b2;
   }
+
+  .buttons {
+      display: flex;
+      justify-content: center; /* Horizontally center the buttons */
+      gap: 20px; /* Adds space between the buttons */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+      .container {
+          max-width: calc(100% - 200px); /* Reduce margin for smaller screens */
+      }
+  }
+
+  @media (max-width: 768px) {
+      .container {
+          max-width: calc(100% - 100px); /* Further reduce margin for tablets */
+      }
+
+      h1 {
+          font-size: 2rem; /* Adjust heading size for smaller screens */
+      }
+  }
+
+  @media (max-width: 480px) {
+      .container {
+          max-width: calc(100% - 40px); /* Minimal margin for mobile devices */
+          padding: 15px;
+      }
+
+      h1 {
+          font-size: 1.8rem; /* Further adjust heading size for mobile */
+      }
+
+      p {
+          font-size: 1rem; /* Adjust paragraph font size for mobile */
+      }
+  }
 </style>
 <body>
   <div class="container">
@@ -75,38 +114,38 @@
         <p><strong>💰 Entry Fee:</strong> ₹50 per participant</p>
         
         <h3>About the Event</h3>
-        <p>Quick CAD Clash is a competitive CAD event aimed at testing participants' proficiency in **Dassault Systèmes' CATIA** software. The event consists of three technical rounds where students will showcase their **modeling, problem-solving, and assembly** skills.</p>
+        <p>Quick CAD Clash is a competitive CAD event aimed at testing participants' proficiency in Dassault Systèmes' CATIA software. The event consists of three technical rounds where students will showcase their modeling, problem-solving, and assembly skills.</p>
 
         <h3>Event Structure</h3>
 
         <h4>Round 1: Part Modelling</h4>
         <ul>
-            <li>Participants will be given a **2D drawing with dimensions**.</li>
-            <li>They must create an **accurate 3D model** in CATIA within a time limit.</li>
+            <li>Participants will be given a 2D drawing with dimensions.</li>
+            <li>They must create an accurate 3D model in CATIA within a time limit.</li>
             <li><strong>Judging Criteria:</strong> Accuracy, proper constraints, and time efficiency.</li>
             <li><strong>Elimination Round:</strong> Top-performing participants proceed to the next round.</li>
         </ul>
 
         <h4>Round 2: Sheet Metal Design</h4>
         <ul>
-            <li>Participants must **identify & rectify design errors** in a faulty CATIA file.</li>
-            <li>They will **assemble different 3D parts** correctly using provided constraints.</li>
+            <li>Participants must identify & rectify design errors in a faulty CATIA file.</li>
+            <li>They will assemble different 3D parts correctly using provided constraints.</li>
             <li><strong>Judging Criteria:</strong> Precision, correctness of constraints, and assembly feasibility.</li>
             <li>Further elimination will take place based on performance.</li>
         </ul>
 
         <h4>Round 3: Error Solution & Assembly Design</h4>
         <ul>
-            <li>Finalists will work on a **complex sheet metal component** using CATIA’s Sheet Metal Design module.</li>
+            <li>Finalists will work on a complex sheet metal component using CATIA’s Sheet Metal Design module.</li>
             <li><strong>Judging Criteria:</strong> Correct application of sheet metal commands, design feasibility, and adherence to given specifications.</li>
             <li>Top performers will be declared winners.</li>
         </ul>
 
         <h3>Eligibility Criteria</h3>
         <ul>
-            <li>Open to **engineering students (Diploma, UG, PG)** from Mechanical, Automobile, Production, and related fields.</li>
+            <li>Open to engineering students (Diploma, UG, PG) from Mechanical, Automobile, Production, and related fields.</li>
             <li>Basic knowledge of CATIA is required.</li>
-            <li>Participants can register **individually**.</li>
+            <li>Participants can register individually.</li>
         </ul>
 
         <h3>Additional Details</h3>
@@ -114,7 +153,7 @@
             <li><strong>📌 Event Mode:</strong> Offline (on-campus)</li>
             <li><strong>📌 Software Used:</strong> CATIA V5/V6</li>
             <li><strong>📌 Judges:</strong> Faculty and Industry Experts</li>
-            <li>Participants can carry their **own laptop**.</li>
+            <li>Participants can carry their own laptop.</li>
         </ul>
 
         <h3>Prizes & Certifications</h3>

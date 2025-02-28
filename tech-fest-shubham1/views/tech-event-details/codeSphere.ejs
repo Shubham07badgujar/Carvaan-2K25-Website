@@ -21,11 +21,12 @@
       padding: 20px;
   }
 
-  .details-container {
-      max-width: 800px;
+  .container {
+      max-width: calc(100% - 400px); /* 200px margin on both sides */
       margin: 0 auto;
       padding: 20px;
       background-color: #112240;
+      border: 2px solid #64ffda; /* Border color matching the theme */
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -57,10 +58,49 @@
       cursor: pointer;
       text-decoration: none;
       transition: background-color 0.3s ease;
+      justify-content: center;
   }
 
   .btn:hover {
       background-color: #52d1b2;
+  }
+
+  .buttons {
+      display: flex;
+      justify-content: center; /* Horizontally center the buttons */
+      gap: 20px; /* Adds space between the buttons */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+      .container {
+          max-width: calc(100% - 200px); /* Reduce margin for smaller screens */
+      }
+  }
+
+  @media (max-width: 768px) {
+      .container {
+          max-width: calc(100% - 100px); /* Further reduce margin for tablets */
+      }
+
+      h1 {
+          font-size: 2rem; /* Adjust heading size for smaller screens */
+      }
+  }
+
+  @media (max-width: 480px) {
+      .container {
+          max-width: calc(100% - 40px); /* Minimal margin for mobile devices */
+          padding: 15px;
+      }
+
+      h1 {
+          font-size: 1.8rem; /* Further adjust heading size for mobile */
+      }
+
+      p {
+          font-size: 1rem; /* Adjust paragraph font size for mobile */
+      }
   }
 </style>
 <body>
@@ -116,8 +156,8 @@
         </div>
 
         <div class="buttons">
-            <a href="registration_link" class="btn">Register Now</a>
-            <a href="rulebook.pdf" class="btn">Download Rulebook</a>
+            <a href="https://forms.gle/84yC6N9iGARbN1so9" class="btn">Register Now</a>
+            <a href="https://drive.google.com/uc?export=download&id=1d4GUgN-fk-YMhma0JD6NXlxE7gZwrkcv" class="btn">Download Rulebook</a>
         </div>
     </div>
 </div>
