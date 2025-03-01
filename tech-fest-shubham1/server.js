@@ -100,6 +100,10 @@ app.get('/tech-event-details/autoCad', (req, res) => {
   res.render('tech-event-details/autoCad');
 });
 
+app.get('/tech-event-details/asterix', (req, res) => {
+  res.render('tech-event-details/asterix');
+});
+
 
 
 
